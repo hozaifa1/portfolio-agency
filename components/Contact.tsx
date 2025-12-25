@@ -35,8 +35,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 bg-[#09090b] relative">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -44,10 +45,10 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Let&apos;s Build Something Great
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Get a free consultation and project estimate within 24 hours
           </p>
         </motion.div>
@@ -59,8 +60,8 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6 text-[#06b6d4]">Get in Touch</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -114,49 +115,49 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
           >
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-semibold text-slate-300 mb-2">
                 Full Name *
               </label>
               <input
                 type="text"
                 id="name"
                 required
-                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 bg-slate-800 border-2 border-slate-700 rounded-lg focus:border-[#06b6d4] focus:outline-none transition-colors text-white placeholder:text-slate-500"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold text-slate-300 mb-2">
                 Email Address *
               </label>
               <input
                 type="email"
                 id="email"
                 required
-                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 bg-slate-800 border-2 border-slate-700 rounded-lg focus:border-[#06b6d4] focus:outline-none transition-colors text-white placeholder:text-slate-500"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="company" className="block text-sm font-semibold text-slate-300 mb-2">
                 Company / Organization *
               </label>
               <input
                 type="text"
                 id="company"
                 required
-                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 bg-slate-800 border-2 border-slate-700 rounded-lg focus:border-[#06b6d4] focus:outline-none transition-colors text-white placeholder:text-slate-500"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="phone" className="block text-sm font-semibold text-slate-300 mb-2">
                 Phone Number *
               </label>
               <input
@@ -164,38 +165,38 @@ export default function Contact() {
                 id="phone"
                 required
                 placeholder="+880 1XXX XXXXXX"
-                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 bg-slate-800 border-2 border-slate-700 rounded-lg focus:border-[#06b6d4] focus:outline-none transition-colors text-white placeholder:text-slate-500"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               />
             </div>
 
             <div>
-              <label htmlFor="budget" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="budget" className="block text-sm font-semibold text-slate-300 mb-2">
                 Estimated Budget
               </label>
               <select
                 id="budget"
-                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors bg-white text-slate-900"
+                className="w-full px-4 py-3 bg-slate-800 border-2 border-slate-700 rounded-lg focus:border-[#06b6d4] focus:outline-none transition-colors text-white"
                 value={formData.budget}
                 onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
               >
                 <option value="">Select budget range</option>
                 <option value="essentials">৳15,000/month - Essentials</option>
                 <option value="growth">৳40,000/month - Growth</option>
-                <option value="sovereign">৳60,000+/month - Sovereign</option>
+                <option value="custom">Contact for Custom Quote</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-semibold text-slate-300 mb-2">
                 What is your biggest operational pain point? *
               </label>
               <textarea
                 id="message"
                 required
                 rows={5}
-                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors resize-none"
+                className="w-full px-4 py-3 bg-slate-800 border-2 border-slate-700 rounded-lg focus:border-[#06b6d4] focus:outline-none transition-colors resize-none text-white placeholder:text-slate-500"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="e.g., Manual inventory tracking, payroll errors, student record management..."

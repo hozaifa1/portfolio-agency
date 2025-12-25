@@ -42,8 +42,8 @@ export const projects = [
     }
   },
   {
-    id: "voicelink",
-    title: "Voice Link: Real-time Audio Routing",
+    id: "streamsync",
+    title: "StreamSync: Real-time Audio Routing",
     client: "Commercial Beta",
     category: "Mobile / Android",
     description: "Developed a low-latency Android app to transmit in-app audio and voice during HD screen sharing sessions.",

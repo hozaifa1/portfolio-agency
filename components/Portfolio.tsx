@@ -7,9 +7,15 @@ import Link from 'next/link';
 import { projects } from '@/lib/data';
 
 export default function Portfolio() {
+  // Show only featured projects: ERP, LMS, StreamSync, Ecommerce
+  const featuredProjects = projects.filter(p => 
+    ['prova-erp', 'igmis-lms', 'streamsync', 'ecommerce-platform'].includes(p.id)
+  );
+
   return (
-    <section id="portfolio" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="py-24 bg-slate-900/50 relative">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -17,16 +23,16 @@ export default function Portfolio() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Real-world solutions delivering measurable impact
           </p>
         </motion.div>
 
-        <div className="space-y-16">
-          {projects.map((project, idx) => (
+        <div className="space-y-12">
+          {featuredProjects.map((project, idx) => (
             <motion.div
               key={project.id}
               className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
@@ -37,8 +43,8 @@ export default function Portfolio() {
             >
               {project.image && (
                 <div className="w-full lg:w-1/2">
-                  <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 group-hover:opacity-0 transition-opacity"></div>
+                  <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-800 group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#06b6d4]/10 to-transparent group-hover:opacity-0 transition-opacity"></div>
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -46,7 +52,7 @@ export default function Portfolio() {
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-slate-900/80 transition-opacity">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-[#09090b]/90 transition-opacity">
                       <p className="text-white text-lg font-semibold">Click to view details</p>
                     </div>
                   </div>
@@ -54,32 +60,32 @@ export default function Portfolio() {
               )}
 
               <div className={`${project.image ? 'lg:w-1/2' : 'lg:w-full'} space-y-4`}>
-                <div className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-semibold">
+                <div className="inline-block px-4 py-1 bg-[#06b6d4]/10 text-[#06b6d4] rounded-full text-sm font-semibold">
                   {project.category}
                 </div>
 
-                <h3 className="text-3xl font-bold text-slate-900">
+                <h3 className="text-3xl font-bold text-white">
                   {project.title}
                 </h3>
 
-                <p className="text-lg text-slate-600">
+                <p className="text-lg text-slate-400">
                   {project.description}
                 </p>
 
                 <ul className="space-y-2">
                   {project.highlights.map((highlight, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></span>
-                      <span className="text-slate-700">{highlight}</span>
+                      <span className="w-1.5 h-1.5 bg-[#06b6d4] rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="text-slate-300 text-sm">{highlight}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="grid grid-cols-3 gap-4 py-4">
+                <div className="grid grid-cols-3 gap-3 py-4">
                   {Object.entries(project.impact).map(([key, value]) => (
-                    <div key={key} className="text-center p-3 bg-slate-50 rounded-lg">
-                      <div className="font-bold text-cyan-600 text-lg">{value}</div>
-                      <div className="text-xs text-slate-600 capitalize">{key}</div>
+                    <div key={key} className="text-center p-3 bg-slate-800/50 rounded-lg border border-slate-700">
+                      <div className="font-bold text-[#06b6d4] text-sm">{value}</div>
+                      <div className="text-xs text-slate-500 capitalize">{key}</div>
                     </div>
                   ))}
                 </div>
@@ -88,7 +94,7 @@ export default function Portfolio() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium"
+                      className="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-xs font-medium border border-slate-700"
                     >
                       {tech}
                     </span>
@@ -101,7 +107,7 @@ export default function Portfolio() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors border border-slate-700"
                     >
                       <Github className="w-4 h-4" />
                       View Code
@@ -109,7 +115,7 @@ export default function Portfolio() {
                   )}
                   <Link
                     href={`/portfolio/${project.id}`}
-                    className="flex items-center gap-2 px-4 py-2 border-2 border-cyan-500 text-cyan-600 rounded-lg hover:bg-cyan-50 transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 border-2 border-[#06b6d4] text-[#06b6d4] rounded-lg hover:bg-[#06b6d4]/10 transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Case Study
@@ -128,7 +134,7 @@ export default function Portfolio() {
         >
           <Link
             href="/portfolio"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-semibold text-lg hover:shadow-lg transition-shadow"
+            className="inline-block px-8 py-4 bg-[#06b6d4] hover:bg-cyan-500 text-white rounded-lg font-semibold text-lg transition-all shadow-lg shadow-[#06b6d4]/30"
           >
             View All Projects
           </Link>

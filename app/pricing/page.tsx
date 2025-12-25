@@ -42,20 +42,20 @@ const pricingTiers = [
     recommended: true
   },
   {
-    id: 'sovereign',
-    name: 'Sovereign',
+    id: 'custom',
+    name: 'Custom',
     icon: Rocket,
-    price: 60000,
-    bestFor: 'Enterprise & AI Projects',
+    price: null,
+    bestFor: 'Enterprise & Complex Projects',
     features: [
+      'Tailored to your needs',
+      'AI/ML integration',
+      'Multi-platform solutions',
       'Distributed architecture',
-      'Custom AI integration',
-      'Multi-platform apps',
-      'Advanced analytics',
-      'Dedicated VPS',
-      '24/7 monitoring',
-      'Strategy calls',
-      'Priority support (<2hr)'
+      'Dedicated infrastructure',
+      '24/7 premium support',
+      'Strategic consulting',
+      'Custom SLAs'
     ],
     recommended: false
   }
@@ -159,10 +159,17 @@ export default function PricingPage() {
                   </div>
 
                   <div className="mb-6 pb-6 border-b border-slate-800">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-5xl font-bold text-[#06b6d4]">৳{(tier.price / 1000).toFixed(0)}k</span>
-                      <span className="text-slate-400 text-sm">/month</span>
-                    </div>
+                    {tier.price ? (
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-5xl font-bold text-[#06b6d4]">৳{(tier.price / 1000).toFixed(0)}k</span>
+                        <span className="text-slate-400 text-sm">/month</span>
+                      </div>
+                    ) : (
+                      <div className="text-center">
+                        <span className="text-3xl font-bold text-slate-300">Custom Quote</span>
+                        <p className="text-slate-500 text-sm mt-2">Contact us for pricing</p>
+                      </div>
+                    )}
                   </div>
 
                   <ul className="space-y-3 mb-8">
@@ -179,10 +186,12 @@ export default function PricingPage() {
                     className={`block w-full py-3 rounded-lg font-semibold text-center transition-all ${
                       tier.recommended
                         ? 'bg-[#06b6d4] text-white hover:bg-cyan-500 shadow-lg shadow-[#06b6d4]/30'
+                        : tier.price === null
+                        ? 'bg-slate-800 text-white hover:bg-slate-700 border-2 border-slate-700'
                         : 'border-2 border-slate-700 text-slate-300 hover:border-[#06b6d4] hover:text-[#06b6d4]'
                     }`}
                   >
-                    Get Started
+                    {tier.price === null ? 'Contact for Quote' : 'Get Started'}
                   </Link>
                 </motion.div>
               );

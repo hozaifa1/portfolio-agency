@@ -174,6 +174,7 @@ export const projects = [
       "Payment gateway integration and inventory management"
     ],
     tech: ["PHP", "Laravel", "Bagisto", "MySQL", "Tailwind CSS"],
+    image: "/projects/ecommerce-platform.png",
     github: "https://github.com/hozaifa1/Ecommerce",
     status: "Development",
     impact: {

@@ -39,16 +39,18 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
         </div>
 
         <div className="max-w-4xl mx-auto px-4 py-16">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
-            <div className="relative aspect-video">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
+          {project.image && (
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+              <div className="relative aspect-video">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {Object.entries(project.impact).map(([key, value]) => (

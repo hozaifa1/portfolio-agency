@@ -35,21 +35,23 @@ export default function Portfolio() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: idx * 0.1 }}
             >
-              <div className="lg:w-1/2">
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 group-hover:opacity-0 transition-opacity"></div>
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-slate-900/80 transition-opacity">
-                    <p className="text-white text-lg font-semibold">Click to view details</p>
+              {project.image && (
+                <div className="lg:w-1/2">
+                  <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 group-hover:opacity-0 transition-opacity"></div>
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-slate-900/80 transition-opacity">
+                      <p className="text-white text-lg font-semibold">Click to view details</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
 
               <div className="lg:w-1/2 space-y-4">
                 <div className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-semibold">

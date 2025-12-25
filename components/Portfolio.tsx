@@ -43,8 +43,8 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: idx * 0.1 }}
             >
               {project.image && (
-                <div className="w-full lg:w-1/2">
-                  <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-800 group">
+                <Link href={`/portfolio/${project.id}`} className="w-full lg:w-1/2">
+                  <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-800 group cursor-pointer">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#06b6d4]/10 to-transparent group-hover:opacity-0 transition-opacity"></div>
                     <Image
                       src={project.image}
@@ -57,7 +57,7 @@ export default function Portfolio() {
                       <p className="text-white text-lg font-semibold">Click to view details</p>
                     </div>
                   </div>
-                </div>
+                </Link>
               )}
 
               <div className={`${project.image ? 'lg:w-1/2' : 'lg:w-full'} space-y-4`}>

@@ -61,15 +61,14 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-cyan-300">
-              Nexora Systems
+              Built for Scale
             </span>
-            <span className="block text-white">Building Tomorrow&apos;s Technology Today</span>
           </motion.h1>
 
           <motion.p

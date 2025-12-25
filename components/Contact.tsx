@@ -23,8 +23,8 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <motion.a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=20hozaifa02@gmail.com&su=NextGen%20Solution%20Inquiry"
               target="_blank"
@@ -33,24 +33,17 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 p-8 hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105"
+              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
             >
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Mail className="w-8 h-8 text-white" />
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-blue-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Send Email</h3>
-                <p className="text-blue-50/90 text-sm mb-4">
-                  Drop us an email and we&apos;ll get back to you soon
-                </p>
-                <div className="inline-flex items-center gap-2 text-white font-semibold">
-                  <span>Email Us</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
+                <h3 className="text-lg font-semibold text-white">Email</h3>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <p className="text-slate-400 text-xs">
+                Quick response via email
+              </p>
             </motion.a>
 
             <motion.a
@@ -61,24 +54,17 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-600 to-emerald-500 p-8 hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-300 hover:scale-105"
+              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
             >
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <MessageSquare className="w-8 h-8 text-white" />
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MessageSquare className="w-5 h-5 text-green-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">WhatsApp</h3>
-                <p className="text-green-50/90 text-sm mb-4">
-                  Text us on WhatsApp for quick responses
-                </p>
-                <div className="inline-flex items-center gap-2 text-white font-semibold">
-                  <span>Chat Now</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
+                <h3 className="text-lg font-semibold text-white">WhatsApp</h3>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <p className="text-slate-400 text-xs">
+                Instant messaging support
+              </p>
             </motion.a>
 
             <motion.a
@@ -87,24 +73,17 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600 to-pink-500 p-8 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105"
+              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
             >
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Phone className="w-8 h-8 text-white" />
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-purple-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Call Us</h3>
-                <p className="text-purple-50/90 text-sm mb-4">
-                  Speak with us directly for urgent matters
-                </p>
-                <div className="inline-flex items-center gap-2 text-white font-semibold">
-                  <span>Call Now</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
+                <h3 className="text-lg font-semibold text-white">Phone</h3>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <p className="text-slate-400 text-xs">
+                Direct call for urgent needs
+              </p>
             </motion.a>
 
             <motion.div
@@ -112,21 +91,17 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-600 to-red-500 p-8 hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105"
+              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
             >
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-8 h-8 text-white" />
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-orange-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Location</h3>
-                <p className="text-orange-50/90 text-sm mb-4">
-                  Serving clients globally with remote expertise
-                </p>
-                <div className="inline-flex items-center gap-2 text-white font-semibold">
-                  <span>Remote Worldwide</span>
-                </div>
+                <h3 className="text-lg font-semibold text-white">Location</h3>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <p className="text-slate-400 text-xs">
+                Remote worldwide
+              </p>
             </motion.div>
           </div>
 

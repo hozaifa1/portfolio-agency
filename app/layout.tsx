@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HZH Systems | Custom Software for Textile and Education Sectors Bangladesh",
-  description: "Custom software for textile and education sectors. Automate your business with HZH Systems. We build ERPs, LMS platforms, and Distributed AI systems that save you money. Based in Dhaka, Bangladesh.",
+  title: "Synkraft Labs | Custom Software for Textile and Education Sectors Bangladesh",
+  description: "Custom software for textile and education sectors. Automate your business with Synkraft Labs. We build ERPs, LMS platforms, and Distributed AI systems that save you money. Based in Dhaka, Bangladesh.",
   keywords: [
     "ERP software Bangladesh",
     "LMS platform Bangladesh",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "S. M. Hozaifa Hossain" }],
   openGraph: {
-    title: "HZH Systems - Engineering Intelligence for Bangladeshi Enterprises",
+    title: "Synkraft Labs - Engineering Intelligence for Bangladeshi Enterprises",
     description: "We build automated ERPs, LMS platforms, and Distributed AI systems that save you money.",
     locale: "en_BD",
     type: "website",

@@ -190,7 +190,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="message" className="block text-sm font-semibold text-slate-300 mb-2">
-                What is your biggest operational pain point? *
+                Project Details *
               </label>
               <textarea
                 id="message"
@@ -199,7 +199,7 @@ export default function Contact() {
                 className="w-full px-4 py-3 bg-slate-800 border-2 border-slate-700 rounded-lg focus:border-[#06b6d4] focus:outline-none transition-colors resize-none text-white placeholder:text-slate-500"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                placeholder="e.g., Manual inventory tracking, payroll errors, student record management..."
+                placeholder="Describe your project requirements, goals, and expected timeline..."
               />
             </div>
 

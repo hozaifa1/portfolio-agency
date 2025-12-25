@@ -30,11 +30,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
               <ArrowLeft className="w-4 h-4" />
               Back to Portfolio
             </Link>
-            <div className="inline-block px-4 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold mb-4">
-              {project.category}
-            </div>
-            <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
-            <p className="text-xl text-slate-300">{project.client}</p>
+            <h1 className="text-5xl font-bold">{project.title}</h1>
           </div>
         </div>
 

@@ -292,10 +292,10 @@ export const pricingTiers = [
   },
   {
     id: "custom",
-    name: "Custom",
+    name: "Enterprise Solutions",
     price: null,
     period: "month",
-    description: "Enterprise & Complex Projects",
+    description: "Complex Projects & AI Integration",
     features: [
       "Tailored to your needs",
       "AI/ML integration",

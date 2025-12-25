@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#09090b] pt-28">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#09090b]">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
       
       <div className="absolute inset-0">

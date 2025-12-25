@@ -312,6 +312,44 @@ export const pricingTiers = [
   }
 ];
 
+export const addOns = [
+  { name: 'Urgent Delivery', price: 25000, description: 'Rush fee for delivery under 14 days' },
+  { name: 'Staff Training', price: 10000, description: 'On-site or Zoom training for employees (per session)' },
+  { name: 'Biometric Integration', price: 20000, description: 'Hardware linking (fingerprint scanners) for attendance systems' },
+  { name: 'Payment Gateway', price: 15000, description: 'Integration with SSLCommerz or bKash Merchant API' }
+];
+
+export const faqs = [
+  {
+    question: 'Why am I paying monthly?',
+    answer: 'You\'re not just buying code; you\'re buying a "Digital Department." The monthly retainer covers hosting infrastructure, security updates, backups, bug fixes, feature improvements, and direct access to your technical partner. Think of it like paying rent for a physical office - except this office never closes and keeps improving.'
+  },
+  {
+    question: 'What\'s included in each plan?',
+    answer: 'Essentials: Perfect for landing pages and portfolios with 5 pages, forms, and basic hosting. Growth: Full ERP/LMS systems with auth, inventory, invoicing, dashboards - ideal for textile and education sectors. Custom: Enterprise-grade distributed systems with AI integration, multi-platform apps, and dedicated infrastructure.'
+  },
+  {
+    question: 'What happens if I cancel?',
+    answer: 'You own your data. If you cancel, we provide a full export of your database in CSV/Excel format within 48 hours. No lock-ins. The source code remains yours if agreed upon in the contract. However, hosting and maintenance services will cease.'
+  },
+  {
+    question: 'Can I switch between plans?',
+    answer: 'Absolutely. You can upgrade at any time. Downgrading is possible at the end of your current billing cycle. We\'ll help migrate your features accordingly.'
+  },
+  {
+    question: 'Do you provide the source code?',
+    answer: 'Yes. Upon project completion, you receive full access to your project\'s source code repository. You can host it yourself or keep using our managed services.'
+  },
+  {
+    question: 'Is there a setup or implementation fee?',
+    answer: 'Setup costs vary based on project complexity and are quoted separately. The monthly pricing covers ongoing hosting, maintenance, updates, and support. Contact us for a detailed quote including initial setup.'
+  },
+  {
+    question: 'What if I need something not listed in any tier?',
+    answer: 'We offer custom quotes for unique requirements. Contact us and we\'ll design a solution that fits your exact needs and budget.'
+  }
+];
+
 export const testimonials = [
   {
     id: 1,

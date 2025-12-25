@@ -4,100 +4,21 @@ import { motion } from 'framer-motion';
 import { Check, Zap, Shield, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import Contact from '@/components/Contact';
+import { pricingTiers as pricingData, addOns, faqs } from '@/lib/data';
 
-const pricingTiers = [
-  {
-    id: 'essentials',
-    name: 'Essentials',
-    icon: Zap,
-    price: 15000,
-    bestFor: 'Small Businesses & Startups',
-    features: [
-      '5-page website',
-      'Contact form integration',
-      'Mobile responsive',
-      'CDN hosting',
-      'SSL certificate',
-      'Monthly content updates',
-      'Email support (48hr)'
-    ],
-    recommended: false
-  },
-  {
-    id: 'growth',
-    name: 'Growth',
-    icon: Shield,
-    price: 40000,
-    bestFor: 'Textile & Education Sector',
-    features: [
-      'Full ERP/LMS system',
-      'Role-based access control',
-      'Inventory management',
-      'Automated invoicing',
-      'Financial dashboards',
-      'Daily backups',
-      'WhatsApp support',
-      '5hrs dev time/month'
-    ],
-    recommended: true
-  },
-  {
-    id: 'custom',
-    name: 'Custom',
-    icon: Rocket,
-    price: null,
-    bestFor: 'Enterprise & Complex Projects',
-    features: [
-      'Tailored to your needs',
-      'AI/ML integration',
-      'Multi-platform solutions',
-      'Distributed architecture',
-      'Dedicated infrastructure',
-      '24/7 premium support',
-      'Strategic consulting',
-      'Custom SLAs'
-    ],
-    recommended: false
-  }
-];
+// Icon mapping for pricing tiers
+const iconMap = {
+  essentials: Zap,
+  growth: Shield,
+  custom: Rocket
+};
 
-const addOns = [
-  { name: 'Urgent Delivery', price: 25000, description: 'Rush fee for delivery under 14 days' },
-  { name: 'Staff Training', price: 10000, description: 'On-site or Zoom training for employees (per session)' },
-  { name: 'Biometric Integration', price: 20000, description: 'Hardware linking (fingerprint scanners) for attendance systems' },
-  { name: 'Payment Gateway', price: 15000, description: 'Integration with SSLCommerz or bKash Merchant API' }
-];
-
-const faqs = [
-  {
-    question: 'Why am I paying monthly?',
-    answer: 'You\'re not just buying code; you\'re buying a "Digital Department." The monthly retainer covers hosting infrastructure, security updates, backups, bug fixes, feature improvements, and direct access to your technical partner. Think of it like paying rent for a physical office - except this office never closes and keeps improving.'
-  },
-  {
-    question: 'What\'s included in each plan?',
-    answer: 'Essentials: Perfect for landing pages and portfolios with 5 pages, forms, and basic hosting. Growth: Full ERP/LMS systems with auth, inventory, invoicing, dashboards - ideal for textile and education sectors. Sovereign: Enterprise-grade distributed systems with AI integration, multi-platform apps, and dedicated infrastructure.'
-  },
-  {
-    question: 'What happens if I cancel?',
-    answer: 'You own your data. If you cancel, we provide a full export of your database in CSV/Excel format within 48 hours. No lock-ins. The source code remains yours if agreed upon in the contract. However, hosting and maintenance services will cease.'
-  },
-  {
-    question: 'Can I switch between plans?',
-    answer: 'Absolutely. You can upgrade at any time. Downgrading is possible at the end of your current billing cycle. We\'ll help migrate your features accordingly.'
-  },
-  {
-    question: 'Do you provide the source code?',
-    answer: 'Yes. Upon project completion, you receive full access to your project\'s source code repository. You can host it yourself or keep using our managed services.'
-  },
-  {
-    question: 'Is there a setup or implementation fee?',
-    answer: 'Setup costs vary based on project complexity and are quoted separately. The monthly pricing covers ongoing hosting, maintenance, updates, and support. Contact us for a detailed quote including initial setup.'
-  },
-  {
-    question: 'What if I need something not listed in any tier?',
-    answer: 'We offer custom quotes for unique requirements. Contact us and we\'ll design a solution that fits your exact needs and budget.'
-  }
-];
+const pricingTiers = pricingData.map(tier => ({
+  ...tier,
+  icon: iconMap[tier.id as keyof typeof iconMap],
+  price: tier.price?.bdt || null,
+  bestFor: tier.description
+}));
 
 export default function PricingPage() {
   return (

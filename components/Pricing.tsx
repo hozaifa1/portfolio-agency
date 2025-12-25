@@ -7,24 +7,24 @@ import { pricingTiers } from '@/lib/data';
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-slate-900">
+    <section id="pricing" className="py-16 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             Transparent Pricing
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Subscription-based plans designed for Bangladesh market
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {pricingTiers.map((tier, idx) => (
             <motion.div
               key={tier.id}
@@ -108,7 +108,7 @@ export default function Pricing() {
         </div>
 
         <motion.div
-          className="mt-12 text-center"
+          className="mt-8 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

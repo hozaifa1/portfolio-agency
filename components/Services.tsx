@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Code2, Smartphone, Brain, Monitor, Package, Sparkles } from 'lucide-react';
 import { services } from '@/lib/data';
+import Link from 'next/link';
 
 const iconMap = {
   Code2,
@@ -13,39 +14,52 @@ const iconMap = {
   Sparkles,
 };
 
+const serviceToProjectMap: Record<string, string> = {
+  'textile-erp': 'prova-erp',
+  'lms': 'igmis-lms',
+  'ai-ml': 'waiter-detection',
+  'desktop-apps': 'torbiz',
+  'mobile-apps': 'streamsync',
+  'ecommerce': 'ecommerce-platform',
+};
+
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-[#09090b] relative">
+    <section id="services" className="py-16 bg-[#09090b] relative">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             Services We Offer
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             End-to-end software solutions tailored to your business needs
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
             return (
-              <motion.div
+              <Link
                 key={service.id}
-                className="group relative bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-800/90 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/60 transition-all duration-500 overflow-hidden shadow-xl hover:shadow-cyan-500/20"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                href={`/portfolio#${serviceToProjectMap[service.id]}`}
+                className="block"
               >
+                <motion.div
+                  className="group relative bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-800/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/60 transition-all duration-500 overflow-hidden shadow-xl hover:shadow-cyan-500/20 cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                >
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div className="relative z-10 flex flex-col h-full">
@@ -82,6 +96,7 @@ export default function Services() {
                   </div>
                 </div>
               </motion.div>
+              </Link>
             );
           })}
         </div>

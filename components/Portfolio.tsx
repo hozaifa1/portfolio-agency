@@ -14,25 +14,25 @@ export default function Portfolio() {
     .filter(Boolean) as typeof projects;
 
   return (
-    <section id="portfolio" className="py-24 bg-slate-900/50 relative">
+    <section id="portfolio" className="py-16 bg-slate-900/50 relative">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             Featured Projects
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Real-world solutions delivering measurable impact
           </p>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-8">
           {featuredProjects.map((project, idx) => (
             <motion.div
               key={project.id}
@@ -128,7 +128,7 @@ export default function Portfolio() {
         </div>
 
         <motion.div
-          className="text-center mt-16"
+          className="text-center mt-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

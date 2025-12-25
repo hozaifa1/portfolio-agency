@@ -5,20 +5,20 @@ import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-[#09090b] relative">
+    <section id="contact" className="py-16 bg-[#09090b] relative">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             Let&apos;s Build Something Great
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Reach out to us directly - we typically respond within 12-24 hours
           </p>
         </motion.div>
@@ -131,7 +131,7 @@ export default function Contact() {
           </div>
 
           <motion.div
-            className="mt-12 p-8 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl text-center"
+            className="mt-8 p-6 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

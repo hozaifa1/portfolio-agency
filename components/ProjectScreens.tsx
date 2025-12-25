@@ -19,15 +19,15 @@ export default function ProjectScreens({ title, images }: ProjectScreensProps) {
   const [activeImage, setActiveImage] = useState<ScreenImage | null>(null);
 
   return (
-    <div className="mb-12">
-      <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">{title}</h2>
+    <div className="mb-12 px-4">
+      <h2 className="text-3xl font-bold text-white mb-8 text-center">{title}</h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {images.map((image) => (
           <button
             key={image.src}
             onClick={() => setActiveImage(image)}
-            className="text-left bg-white rounded-xl shadow-md overflow-hidden border border-slate-200 group hover:shadow-xl transition-shadow"
+            className="text-left bg-white/5 border border-white/10 rounded-2xl overflow-hidden group hover:border-cyan-400/40 transition-all backdrop-blur-md"
           >
             <div className="relative aspect-video">
               <Image src={image.src} alt={image.title} fill className="object-cover" />
@@ -36,8 +36,8 @@ export default function ProjectScreens({ title, images }: ProjectScreensProps) {
               </div>
             </div>
             <div className="p-4">
-              <h3 className="font-bold text-slate-900 mb-1">{image.title}</h3>
-              <p className="text-sm text-slate-600">{image.description}</p>
+              <h3 className="font-bold text-white mb-1">{image.title}</h3>
+              <p className="text-sm text-slate-300">{image.description}</p>
             </div>
           </button>
         ))}

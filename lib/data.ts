@@ -187,60 +187,60 @@ export const projects = [
 
 export const services = [
   {
-    id: "web-dev",
-    title: "Full-Stack Web Development",
-    description: "Lightning-fast, scalable web applications built with modern frameworks",
+    id: "textile-erp",
+    title: "Textile Supply Chain ERP",
+    description: "Complete textile production management from orders to shipments",
     features: [
-      "Custom Web Applications",
-      "E-commerce Platforms",
-      "Enterprise Dashboards",
-      "API Development & Integration",
-      "Real-time Data Systems"
+      "Foreign & local order tracking",
+      "Sample development workflow",
+      "Financial management & LC tracking",
+      "Production metrics & KPI dashboards",
+      "Incident management & reporting"
     ],
-    tech: ["Next.js", "React", "Django", "Node.js", "PostgreSQL"],
+    tech: ["Next.js", "Django", "PostgreSQL", "Cloudflare R2"],
     icon: "Code2"
   },
   {
-    id: "mobile-dev",
-    title: "Mobile App Development",
-    description: "Native and cross-platform mobile applications users love",
+    id: "ecommerce",
+    title: "E-commerce Platforms",
+    description: "Scalable online stores with seamless payment integration",
     features: [
-      "Android Native Apps (Kotlin)",
-      "Cross-platform Solutions",
-      "Real-time Features",
-      "Push Notifications",
-      "Offline-first Architecture"
+      "Product catalog management",
+      "Secure payment gateways",
+      "Inventory & order tracking",
+      "Customer analytics",
+      "Mobile-responsive design"
     ],
-    tech: ["Kotlin", "React Native", "Android Studio", "Firebase"],
-    icon: "Smartphone"
+    tech: ["Next.js", "Stripe", "PostgreSQL", "Vercel"],
+    icon: "Monitor"
   },
   {
-    id: "ai-ml",
-    title: "AI/ML Integration",
-    description: "Future-proof your business with intelligent automation",
+    id: "lms",
+    title: "Learning Management Systems",
+    description: "Academic platforms with curriculum, exams, and result automation",
     features: [
-      "LLM Integration",
-      "Computer Vision Solutions",
-      "Data Analytics",
-      "Predictive Models",
-      "Automated Workflows"
+      "Multi-program support (BBA, MBA, CSE, etc.)",
+      "Biometric attendance integration",
+      "Automated exam & result generation",
+      "Payment processing & receipt management",
+      "Real-time student dashboards"
     ],
-    tech: ["Python", "PyTorch", "TensorFlow", "OpenAI API"],
+    tech: ["Next.js", "Django", "PostgreSQL", "Cloudinary"],
     icon: "Brain"
   },
   {
-    id: "desktop-apps",
-    title: "Desktop Applications",
-    description: "Cross-platform desktop solutions with native performance",
+    id: "mobile-apps",
+    title: "Mobile Applications",
+    description: "Native Android apps with real-time features and offline support",
     features: [
-      "Windows/macOS/Linux Support",
-      "Native Performance",
-      "Auto-update Systems",
-      "Secure Data Handling",
-      "Modern UI/UX"
+      "Android native development (Kotlin)",
+      "Real-time audio & screen sharing",
+      "Offline-first architecture",
+      "Push notifications",
+      "Material Design UI"
     ],
-    tech: ["Rust", "Tauri", "Electron", "React"],
-    icon: "Monitor"
+    tech: ["Kotlin", "Android Studio", "Firebase", "WebRTC"],
+    icon: "Smartphone"
   }
 ];
 

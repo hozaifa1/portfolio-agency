@@ -26,7 +26,9 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.a
-              href="mailto:20hozaifa02@gmail.com?subject=NextGen%20Solution%20Inquiry"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=20hozaifa02@gmail.com&su=NextGen%20Solution%20Inquiry"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

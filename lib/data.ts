@@ -239,7 +239,7 @@ export const services = [
       "Push notifications",
       "Material Design UI"
     ],
-    tech: ["Kotlin", "Android Studio", "Firebase", "WebRTC"],
+    tech: ["Kotlin", "Android Studio", "Firebase", "WebRTC", "Cloudflare Realtime"],
     icon: "Smartphone"
   },
   {
@@ -253,7 +253,7 @@ export const services = [
       "Predictive Models",
       "Automated Workflows"
     ],
-    tech: ["Python", "PyTorch", "TensorFlow", "OpenAI API"],
+    tech: ["Python", "PyTorch", "TensorFlow", "OpenAI API", "Anthropic", "Google Vertex AI"],
     icon: "Sparkles"
   },
   {

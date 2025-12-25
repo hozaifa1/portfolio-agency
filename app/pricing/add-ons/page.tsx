@@ -49,7 +49,7 @@ export default function AddOnsPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-[#09090b] border-2 border-slate-800 rounded-xl p-6 hover:border-[#06b6d4] transition-all group"
               >
-                <div className="text-[#06b6d4] font-bold text-3xl mb-4">৳{addon.price.toLocaleString()}</div>
+                <div className="text-[#06b6d4] font-bold text-3xl mb-4">${addon.price}</div>
                 <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#06b6d4] transition-colors">{addon.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{addon.description}</p>
               </motion.div>

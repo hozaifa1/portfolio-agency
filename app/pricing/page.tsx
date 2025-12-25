@@ -17,7 +17,7 @@ const iconMap = {
 const pricingTiers = pricingData.map(tier => ({
   ...tier,
   icon: iconMap[tier.id as keyof typeof iconMap],
-  price: tier.price?.bdt || null,
+  price: tier.price || null,
   bestFor: tier.description
 }));
 
@@ -135,7 +135,7 @@ export default function PricingPage() {
                   <div className="mb-6 pb-6 border-b border-slate-800">
                     {tier.price ? (
                       <div className="flex items-baseline gap-1">
-                        <span className="text-5xl font-bold text-[#06b6d4]">৳{tier.price.toLocaleString()}</span>
+                        <span className="text-5xl font-bold text-[#06b6d4]">${tier.price}</span>
                         <span className="text-slate-400 text-sm">/month</span>
                       </div>
                     ) : (

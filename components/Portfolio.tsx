@@ -25,7 +25,7 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Featured Projects
+            What We Did
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Real-world solutions delivering measurable impact
@@ -36,7 +36,8 @@ export default function Portfolio() {
           {featuredProjects.map((project, idx) => (
             <motion.div
               key={project.id}
-              className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
+              id={project.id}
+              className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center scroll-mt-24`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

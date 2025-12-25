@@ -16,26 +16,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nexora | Custom Software for Textile and Education Sectors Bangladesh",
-  description: "Custom software for textile and education sectors. Automate your business with Nexora. We build ERPs, LMS platforms, and Distributed AI systems that save you money. Based in Dhaka, Bangladesh.",
+  title: "Nexora Systems | Custom Software Development & AI Solutions",
+  description: "Building tomorrow's technology today. We build automated ERPs, LMS platforms, and AI-powered solutions that save you money. Enterprise software development with proven expertise.",
   keywords: [
-    "ERP software Bangladesh",
-    "LMS platform Bangladesh",
+    "ERP software development",
+    "LMS platform",
     "textile ERP",
     "education management system",
-    "custom software development Dhaka",
-    "business automation Bangladesh",
+    "custom software development",
+    "business automation",
     "inventory management system",
     "Django development",
     "Next.js development",
     "Python automation",
-    "AI integration Bangladesh"
+    "AI integration"
   ],
   authors: [{ name: "S. M. Hozaifa Hossain" }],
   openGraph: {
-    title: "Nexora - Engineering Intelligence for Bangladeshi Enterprises",
-    description: "We build automated ERPs, LMS platforms, and Distributed AI systems that save you money.",
-    locale: "en_BD",
+    title: "Nexora Systems - Building Tomorrow's Technology Today",
+    description: "We build automated ERPs, LMS platforms, and AI-powered solutions that save you money.",
+    locale: "en_US",
     type: "website",
   },
 };

@@ -12,7 +12,7 @@ export default function PortfolioPage() {
     <main className="pt-16">
       <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Our Work</h1>
+          <h1 className="text-5xl font-bold mb-6">What We Did</h1>
           <p className="text-xl text-slate-300">
             Delivering real-world solutions with measurable business impact
           </p>
@@ -26,7 +26,8 @@ export default function PortfolioPage() {
             {projects.map((project, idx) => (
               <motion.div
                 key={project.id}
-                className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
+                id={project.id}
+                className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center scroll-mt-24`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

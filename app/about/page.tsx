@@ -72,8 +72,8 @@ export default function AboutPage() {
                 <h2 className="text-2xl font-bold text-white mb-2">The Founder</h2>
                 <h3 className="text-lg text-[#06b6d4] mb-3">S. M. Hozaifa Hossain</h3>
                 <div className="space-y-2 text-slate-300 text-sm">
-                  <p><strong className="text-white">Education:</strong> Final Year EEE, University of Dhaka</p>
-                  <p><strong className="text-white">Leadership:</strong> IEEE SIGHT Chair, Bangladesh</p>
+                  <p><strong className="text-white">Education:</strong> Electrical & Electronic Engineering</p>
+                  <p><strong className="text-white">Leadership:</strong> IEEE SIGHT Chair</p>
                   <p><strong className="text-white">Focus:</strong> Automation, Distributed AI, Full-Stack Engineering</p>
                   <p className="text-slate-400 italic mt-3">
                     &quot;I build systems that work efficiently, securely, and at scale.&quot;

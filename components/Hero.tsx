@@ -67,9 +67,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-cyan-300">
-              Smart Solutions
+              Nexora Systems
             </span>
-            <span className="block text-white"> for Bangladesh</span>
+            <span className="block text-white">Building Tomorrow&apos;s Technology Today</span>
           </motion.h1>
 
           <motion.p
@@ -91,7 +91,7 @@ export default function Hero() {
               href="/portfolio"
               className="group px-6 py-3 bg-[#06b6d4] hover:bg-cyan-500 text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-[#06b6d4]/50"
             >
-              Our Solutions
+              What We Did
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -102,7 +102,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/pricing"
-              className="px-4 py-2 text-slate-400 hover:text-[#06b6d4] rounded-lg text-sm font-medium transition-all border border-slate-700 hover:border-[#06b6d4]"
+              className="px-6 py-3 text-slate-400 hover:text-[#06b6d4] rounded-lg font-semibold transition-all border border-slate-700 hover:border-[#06b6d4]"
             >
               Pricing
             </Link>

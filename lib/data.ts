@@ -165,9 +165,9 @@ export const projects = [
   {
     id: "ecommerce-platform",
     title: "E-commerce Platform for Women's Fashion",
-    client: "Dubai Fashion Retail",
+    client: "Fashion Retail",
     category: "E-commerce / Web Development",
-    description: "Complete e-commerce solution for imported women's clothing from Dubai to Bangladesh market.",
+    description: "Complete e-commerce solution for imported women's clothing with international market reach.",
     highlights: [
       "Product catalog with 15+ fashion categories (abayas, hijabs, tunics)",
       "Bagisto framework integration with custom themes",
@@ -180,7 +180,7 @@ export const projects = [
     impact: {
       products: "15+ Categories",
       framework: "Bagisto E-commerce",
-      market: "Dubai-Bangladesh Trade"
+      market: "International Trade"
     }
   }
 ];
@@ -276,10 +276,7 @@ export const pricingTiers = [
   {
     id: "essentials",
     name: "Essentials",
-    price: {
-      bdt: 20000,
-      usd: 175
-    },
+    price: 175,
     period: "month",
     description: "Small Businesses & Startups",
     features: [
@@ -298,12 +295,9 @@ export const pricingTiers = [
   {
     id: "growth",
     name: "Growth",
-    price: {
-      bdt: 40000,
-      usd: 460
-    },
+    price: 460,
     period: "month",
-    description: "Textile & Education Sector",
+    description: "Growing Businesses",
     features: [
       "Full ERP/LMS system",
       "Role-based access control",
@@ -341,9 +335,9 @@ export const pricingTiers = [
 ];
 
 export const addOns = [
-  { name: 'Staff Training', price: 10000, description: 'On-site or Zoom training for employees (per session)' },
-  { name: 'Biometric Integration', price: 20000, description: 'Hardware linking (fingerprint scanners) for attendance systems' },
-  { name: 'Payment Gateway', price: 30000, description: 'Integration with SSLCommerz or bKash Merchant API' }
+  { name: 'Staff Training', price: 99, description: 'On-site or Zoom training for employees (per session)' },
+  { name: 'Biometric Integration', price: 199, description: 'Hardware linking (fingerprint scanners) for attendance systems' },
+  { name: 'Payment Gateway', price: 299, description: 'Payment gateway integration with major providers' }
 ];
 
 export const faqs = [

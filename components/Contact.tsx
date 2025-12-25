@@ -120,10 +120,10 @@ export default function Contact() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Location</h3>
                 <p className="text-orange-50/90 text-sm mb-4">
-                  Based in Dhaka, serving clients globally
+                  Serving clients globally with remote expertise
                 </p>
                 <div className="inline-flex items-center gap-2 text-white font-semibold">
-                  <span>Dhaka, Bangladesh</span>
+                  <span>Remote Worldwide</span>
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>

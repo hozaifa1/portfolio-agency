@@ -45,8 +45,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
-          <p>© {new Date().getFullYear()} Nexora. All rights reserved.</p>
-          <p className="mt-2 text-sm">Dhaka, Bangladesh | 20hozaifa02@gmail.com</p>
+          <p>© {new Date().getFullYear()} Nexora Systems. All rights reserved.</p>
+          <p className="mt-2 text-sm">Remote Worldwide | 20hozaifa02@gmail.com</p>
         </div>
       </div>
     </footer>

@@ -5,26 +5,35 @@ import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+const generateParticles = () => 
+  [...Array(50)].map((_, i) => ({
+    id: i,
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+    duration: 2 + Math.random() * 3,
+    delay: Math.random() * 5,
+  }));
+
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [particles, setParticles] = useState<Array<{
+    id: number;
+    left: number;
+    top: number;
+    duration: number;
+    delay: number;
+  }>>([]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setParticles(generateParticles());
+    
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
-  const [particles] = useState(() => 
-    [...Array(50)].map((_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      duration: 2 + Math.random() * 3,
-      delay: Math.random() * 5,
-    }))
-  );
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#09090b]">

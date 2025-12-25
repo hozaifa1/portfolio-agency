@@ -181,9 +181,9 @@ export default function Contact() {
                 onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
               >
                 <option value="">Select budget range</option>
-                <option value="essentials">৳15,000/month - Essentials (৳50,000 implementation)</option>
-                <option value="growth">৳40,000/month - Growth (৳75,000 implementation)</option>
-                <option value="sovereign">৳60,000+/month - Sovereign (৳1.5 Lakh+ implementation)</option>
+                <option value="essentials">৳15,000/month - Essentials</option>
+                <option value="growth">৳40,000/month - Growth</option>
+                <option value="sovereign">৳60,000+/month - Sovereign</option>
               </select>
             </div>
 

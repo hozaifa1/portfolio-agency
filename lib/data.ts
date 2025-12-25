@@ -206,12 +206,12 @@ export const services = [
     description: "Scalable online stores with seamless payment integration",
     features: [
       "Product catalog management",
-      "Secure payment gateways",
+      "Secure payment gateways (SSLCommerz)",
       "Inventory & order tracking",
-      "Customer analytics",
+      "Multi-currency support",
       "Mobile-responsive design"
     ],
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Vercel"],
+    tech: ["Laravel", "Bagisto", "MySQL", "SSLCommerz"],
     icon: "Monitor"
   },
   {
@@ -241,6 +241,34 @@ export const services = [
     ],
     tech: ["Kotlin", "Android Studio", "Firebase", "WebRTC"],
     icon: "Smartphone"
+  },
+  {
+    id: "ai-ml",
+    title: "AI/ML Integration",
+    description: "Future-proof your business with intelligent automation",
+    features: [
+      "LLM Integration",
+      "Computer Vision Solutions",
+      "Data Analytics",
+      "Predictive Models",
+      "Automated Workflows"
+    ],
+    tech: ["Python", "PyTorch", "TensorFlow", "OpenAI API"],
+    icon: "Sparkles"
+  },
+  {
+    id: "desktop-apps",
+    title: "Desktop Applications",
+    description: "Cross-platform desktop solutions with native performance",
+    features: [
+      "Windows/macOS/Linux Support",
+      "Native Performance",
+      "Auto-update Systems",
+      "Secure Data Handling",
+      "Modern UI/UX"
+    ],
+    tech: ["Rust", "Tauri", "Electron", "React"],
+    icon: "Package"
   }
 ];
 

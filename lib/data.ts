@@ -4,7 +4,7 @@ export const projects = [
     title: "Textile Supply Chain ERP",
     client: "Prova Fashion",
     category: "Production / Freelance",
-    description: "Engineered a full-scale ERP automating inventory, order tracking, and financial reporting for a textile middleman firm.",
+    description: "Engineered a full-scale ERP automating inventory, order tracking, and financial reporting for Prova Fashion.",
     highlights: [
       "Built custom modules for supplier ledgers and fabric stock",
       "Replaced manual systems and reduced accounting errors by 85%",
@@ -15,7 +15,7 @@ export const projects = [
     github: "https://github.com/farihafhf/provabook-3",
     status: "Production",
     impact: {
-      clients: "1 Major Textile Firm",
+      clients: "1 Major Prova Fashion",
       efficiency: "85% Error Reduction",
       automation: "100% Automated Ledgers"
     }

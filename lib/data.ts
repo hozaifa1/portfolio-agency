@@ -211,7 +211,7 @@ export const services = [
       "Multi-currency support",
       "Mobile-responsive design"
     ],
-    tech: ["Laravel", "Bagisto", "MySQL", "SSLCommerz"],
+    tech: ["PHP", "Laravel", "MySQL", "SSLCommerz", "Next.js", "Django", "FastAPI"],
     icon: "Monitor"
   },
   {

@@ -276,7 +276,7 @@ export const pricingTiers = [
   {
     id: "essentials",
     name: "Essentials",
-    price: 175,
+    price: 170,
     period: "month",
     description: "Small Businesses & Startups",
     features: [
@@ -295,7 +295,7 @@ export const pricingTiers = [
   {
     id: "growth",
     name: "Growth",
-    price: 460,
+    price: 350,
     period: "month",
     description: "Growing Businesses",
     features: [
@@ -363,15 +363,15 @@ export const faqs = [
   },
   {
     question: 'Is there a setup or implementation fee?',
-    answer: 'Setup costs vary based on project complexity and are quoted separately. The monthly pricing covers ongoing hosting, maintenance, updates, and support. Contact us for a detailed quote including initial setup.'
-  },
-  {
-    question: 'What if I need something not listed in any tier?',
-    answer: 'We offer custom quotes for unique requirements. Contact us and we\'ll design a solution that fits your exact needs and budget.'
+    answer: 'Yes, there are one-time setup costs. For Essentials websites, the setup cost is $170. For Growth systems (ERP/LMS), the implementation cost is $410. View our complete <a href="/pricing/setup-costs" class="text-[#06b6d4] hover:underline">setup costs page</a> for detailed breakdown.'
   },
   {
     question: 'What additional services are available?',
     answer: 'We offer several add-on services including staff training, biometric integration, and payment gateway setup. View our complete <a href="/pricing/add-ons" class="text-[#06b6d4] hover:underline">add-ons page</a> for detailed pricing and descriptions.'
+  },
+  {
+    question: 'What if I need something not listed in any tier?',
+    answer: 'We offer custom quotes for unique requirements. Contact us and we\'ll design a solution that fits your exact needs and budget.'
   }
 ];
 

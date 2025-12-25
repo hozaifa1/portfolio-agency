@@ -83,26 +83,6 @@ export const projects = [
     }
   },
   {
-    id: "research-pose",
-    title: "Nurses' Skill Assessment via Pose Estimation",
-    client: "Research Publication",
-    category: "AI/ML / Healthcare",
-    description: "Applied multi-view pose estimation to clinical assessment, published in International Journal of Advanced Biomedical and Clinical Research.",
-    highlights: [
-      "Improved F1-score by 9% via custom post-processing",
-      "Multi-view pose estimation for endotracheal suctioning assessment",
-      "Published in IJABC, Vol 2024, Issue 3"
-    ],
-    tech: ["Python", "PyTorch", "OpenCV", "MediaPipe"],
-    image: "/projects/research-pose.png",
-    status: "Published",
-    impact: {
-      accuracy: "9% F1-Score Improvement",
-      publication: "IJABC 2024",
-      domain: "Healthcare AI"
-    }
-  },
-  {
     id: "waiter-detection",
     title: "Waiter Detection & Person Recognition",
     client: "ML Challenge / Computer Vision",
@@ -114,7 +94,6 @@ export const projects = [
       "Multi-person recognition (TANVIR, ANIK, TOUFIQ, IMRAN, MUFRAD, EMON, SHAFAYET, FAISAL)"
     ],
     tech: ["Python", "OpenCV", "Roboflow", "DETR", "Computer Vision"],
-    image: "/projects/waiter-detection.png",
     github: "https://github.com/hozaifa1/Waiter_Calling_Job_Challenge",
     status: "Prototype",
     impact: {
@@ -135,7 +114,6 @@ export const projects = [
       "Achieved 89% similarity match for complex queries"
     ],
     tech: ["Python", "OpenAI Whisper", "FuzzyWuzzy", "NLP"],
-    image: "/projects/video-transcription.png",
     github: "https://github.com/hozaifa1/Video_Transcription_Timestamp",
     status: "Prototype",
     impact: {
@@ -156,7 +134,6 @@ export const projects = [
       "Error handling for insufficient keypoints and homography estimation"
     ],
     tech: ["Python", "OpenCV", "NumPy", "Computer Vision"],
-    image: "/projects/panorama-maker.png",
     github: "https://github.com/hozaifa1/Pano_Maker",
     status: "Prototype",
     impact: {
@@ -177,7 +154,6 @@ export const projects = [
       "Semantic similarity scoring with cosine similarity"
     ],
     tech: ["Python", "Sentence-Transformers", "CLIP", "PyTorch", "Multimodal AI"],
-    image: "/projects/meme-searcher.png",
     github: "https://github.com/hozaifa1/Meme_Searcher",
     status: "Prototype",
     impact: {
@@ -198,7 +174,6 @@ export const projects = [
       "Payment gateway integration and inventory management"
     ],
     tech: ["PHP", "Laravel", "Bagisto", "MySQL", "Tailwind CSS"],
-    image: "/projects/ecommerce-platform.png",
     github: "https://github.com/hozaifa1/Ecommerce",
     status: "Development",
     impact: {

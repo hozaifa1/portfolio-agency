@@ -101,6 +101,111 @@ export const projects = [
       publication: "IJABC 2024",
       domain: "Healthcare AI"
     }
+  },
+  {
+    id: "waiter-detection",
+    title: "Waiter Detection & Person Recognition",
+    client: "ML Challenge / Computer Vision",
+    category: "AI/ML / Computer Vision",
+    description: "Real-time person detection and recognition system for restaurant service monitoring using Roboflow DETR model.",
+    highlights: [
+      "Trained custom DETR model on 73 labeled video frames",
+      "Real-time video processing with confidence threshold 0.42",
+      "Multi-person recognition (TANVIR, ANIK, TOUFIQ, IMRAN, MUFRAD, EMON, SHAFAYET, FAISAL)"
+    ],
+    tech: ["Python", "OpenCV", "Roboflow", "DETR", "Computer Vision"],
+    image: "/projects/waiter-detection.png",
+    github: "https://github.com/hozaifa1/Waiter_Calling_Job_Challenge",
+    status: "Prototype",
+    impact: {
+      accuracy: "0.42+ Confidence Threshold",
+      detection: "8 Person Recognition",
+      processing: "Real-time Video"
+    }
+  },
+  {
+    id: "video-transcription",
+    title: "Video Transcription with Timestamp Search",
+    client: "ML Challenge / NLP",
+    category: "AI/ML / NLP",
+    description: "Advanced video transcription system with fuzzy string matching for precise timestamp-based content search.",
+    highlights: [
+      "Integrated OpenAI Whisper for high-accuracy transcription",
+      "Implemented fuzzy string matching with 80% similarity threshold",
+      "Achieved 89% similarity match for complex queries"
+    ],
+    tech: ["Python", "OpenAI Whisper", "FuzzyWuzzy", "NLP"],
+    image: "/projects/video-transcription.png",
+    github: "https://github.com/hozaifa1/Video_Transcription_Timestamp",
+    status: "Prototype",
+    impact: {
+      accuracy: "89% Query Match Success",
+      transcription: "Word-level Timestamps",
+      search: "Fuzzy String Matching"
+    }
+  },
+  {
+    id: "panorama-maker",
+    title: "Automated Panorama Generation",
+    client: "ML Challenge / Computer Vision",
+    category: "AI/ML / Image Processing",
+    description: "Intelligent video frame extraction and panoramic image stitching system using OpenCV.",
+    highlights: [
+      "Automatic frame extraction at configurable intervals (30 frames)",
+      "OpenCV Stitcher for seamless panorama creation",
+      "Error handling for insufficient keypoints and homography estimation"
+    ],
+    tech: ["Python", "OpenCV", "NumPy", "Computer Vision"],
+    image: "/projects/panorama-maker.png",
+    github: "https://github.com/hozaifa1/Pano_Maker",
+    status: "Prototype",
+    impact: {
+      stitching: "9 Frame Processing",
+      output: "High-resolution Panoramas",
+      automation: "Fully Automated"
+    }
+  },
+  {
+    id: "meme-searcher",
+    title: "AI-Powered Meme Search Engine",
+    client: "ML Challenge / Multimodal AI",
+    category: "AI/ML / Multimodal Search",
+    description: "Semantic image search system using CLIP model for text-to-image matching across meme datasets.",
+    highlights: [
+      "Integrated Sentence-Transformers CLIP ViT-L-14 model",
+      "Multi-format image support (PNG, JPG, WebP)",
+      "Semantic similarity scoring with cosine similarity"
+    ],
+    tech: ["Python", "Sentence-Transformers", "CLIP", "PyTorch", "Multimodal AI"],
+    image: "/projects/meme-searcher.png",
+    github: "https://github.com/hozaifa1/Meme_Searcher",
+    status: "Prototype",
+    impact: {
+      model: "CLIP ViT-L-14",
+      accuracy: "Semantic Similarity Matching",
+      formats: "Multi-format Support"
+    }
+  },
+  {
+    id: "ecommerce-platform",
+    title: "E-commerce Platform for Women's Fashion",
+    client: "Dubai Fashion Retail",
+    category: "E-commerce / Web Development",
+    description: "Complete e-commerce solution for imported women's clothing from Dubai to Bangladesh market.",
+    highlights: [
+      "Product catalog with 15+ fashion categories (abayas, hijabs, tunics)",
+      "Bagisto framework integration with custom themes",
+      "Payment gateway integration and inventory management"
+    ],
+    tech: ["PHP", "Laravel", "Bagisto", "MySQL", "Tailwind CSS"],
+    image: "/projects/ecommerce-platform.png",
+    github: "https://github.com/hozaifa1/Ecommerce",
+    status: "Development",
+    impact: {
+      products: "15+ Categories",
+      framework: "Bagisto E-commerce",
+      market: "Dubai-Bangladesh Trade"
+    }
   }
 ];
 
@@ -265,8 +370,10 @@ export const testimonials = [
 ];
 
 export const stats = [
-  { label: "Projects Delivered", value: "15+" },
+  { label: "Projects Delivered", value: "20+" },
   { label: "Client Satisfaction", value: "100%" },
   { label: "Years Experience", value: "3+" },
-  { label: "Technologies Mastered", value: "20+" }
+  { label: "Technologies Mastered", value: "25+" },
+  { label: "AI/ML Models Built", value: "10+" },
+  { label: "Research Publications", value: "1+" }
 ];

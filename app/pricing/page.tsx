@@ -1,10 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Check, Zap, Shield, Rocket } from 'lucide-react';
+import { Check, Zap, Shield, Rocket, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import Contact from '@/components/Contact';
-import { pricingTiers as pricingData, addOns, faqs } from '@/lib/data';
+import { pricingTiers as pricingData, faqs } from '@/lib/data';
+import { useState } from 'react';
 
 // Icon mapping for pricing tiers
 const iconMap = {
@@ -19,6 +20,58 @@ const pricingTiers = pricingData.map(tier => ({
   price: tier.price?.bdt || null,
   bestFor: tier.description
 }));
+
+function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <section className="py-16 bg-[#09090b]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-white text-center mb-12">FAQ</h2>
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.05 }}
+              className="bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden"
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-800/50 transition-colors"
+              >
+                <h3 className="text-lg font-bold text-white pr-4">
+                  {faq.question}
+                </h3>
+                <ChevronDown 
+                  className={`w-5 h-5 text-[#06b6d4] flex-shrink-0 transition-transform ${
+                    openIndex === idx ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              {openIndex === idx && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="px-6 pb-6"
+                >
+                  <p 
+                    className="text-slate-400 leading-relaxed text-sm"
+                    dangerouslySetInnerHTML={{ __html: faq.answer }}
+                  />
+                </motion.div>
+              )}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function PricingPage() {
   return (
@@ -82,7 +135,7 @@ export default function PricingPage() {
                   <div className="mb-6 pb-6 border-b border-slate-800">
                     {tier.price ? (
                       <div className="flex items-baseline gap-1">
-                        <span className="text-5xl font-bold text-[#06b6d4]">৳{(tier.price / 1000).toFixed(0)}k</span>
+                        <span className="text-5xl font-bold text-[#06b6d4]">৳{tier.price.toLocaleString()}</span>
                         <span className="text-slate-400 text-sm">/month</span>
                       </div>
                     ) : (
@@ -121,61 +174,23 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-slate-900/50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Add-Ons</h2>
-          <div className="grid md:grid-cols-4 gap-4">
-            {addOns.map((addon, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-                className="bg-[#09090b] border border-slate-800 rounded-lg p-4 hover:border-[#06b6d4] transition-all group"
-              >
-                <div className="text-[#06b6d4] font-bold text-xl mb-2">৳{(addon.price / 1000).toFixed(0)}k</div>
-                <h3 className="text-white font-semibold text-sm mb-1 group-hover:text-[#06b6d4] transition-colors">{addon.name}</h3>
-                <p className="text-slate-500 text-xs">{addon.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-[#09090b]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">FAQ</h2>
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-                className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-colors"
-              >
-                <h3 className="text-lg font-bold text-white mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-slate-400 leading-relaxed text-sm">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-12 bg-slate-900/50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-[#09090b] border border-[#06b6d4]/30 rounded-xl p-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-[#09090b] border border-[#06b6d4]/30 rounded-xl p-8"
+          >
             <h3 className="text-2xl font-bold text-white mb-4">No Lock-Ins</h3>
             <p className="text-slate-400 leading-relaxed">
               You own your data. Cancel anytime and receive a full export in CSV/Excel format within 48 hours. <strong className="text-[#06b6d4]">Your business continuity is guaranteed.</strong>
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
+
+      <FAQSection />
 
       <Contact />
     </main>

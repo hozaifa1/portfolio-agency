@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-[#06b6d4] font-mono">Synkraft Labs</h3>
+            <h3 className="text-xl font-bold mb-4 text-[#06b6d4] font-mono">Nexora</h3>
             <p className="text-slate-400">
               Engineering Intelligence for Bangladeshi Enterprises. We build automated ERPs, LMS platforms, and Distributed AI systems.
             </p>
@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
-          <p>© {new Date().getFullYear()} Synkraft Labs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Nexora. All rights reserved.</p>
           <p className="mt-2 text-sm">Dhaka, Bangladesh | 20hozaifa02@gmail.com</p>
         </div>
       </div>

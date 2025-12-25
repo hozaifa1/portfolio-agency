@@ -9,10 +9,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'About', href: '/about' },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-white font-mono">
-            <span className="text-[#06b6d4]">Synkraft</span> Labs
+            <span className="text-[#06b6d4]">Nexora</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

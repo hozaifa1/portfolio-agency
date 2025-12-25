@@ -313,10 +313,9 @@ export const pricingTiers = [
 ];
 
 export const addOns = [
-  { name: 'Urgent Delivery', price: 25000, description: 'Rush fee for delivery under 14 days' },
   { name: 'Staff Training', price: 10000, description: 'On-site or Zoom training for employees (per session)' },
   { name: 'Biometric Integration', price: 20000, description: 'Hardware linking (fingerprint scanners) for attendance systems' },
-  { name: 'Payment Gateway', price: 15000, description: 'Integration with SSLCommerz or bKash Merchant API' }
+  { name: 'Payment Gateway', price: 30000, description: 'Integration with SSLCommerz or bKash Merchant API' }
 ];
 
 export const faqs = [
@@ -347,6 +346,10 @@ export const faqs = [
   {
     question: 'What if I need something not listed in any tier?',
     answer: 'We offer custom quotes for unique requirements. Contact us and we\'ll design a solution that fits your exact needs and budget.'
+  },
+  {
+    question: 'What additional services are available?',
+    answer: 'We offer several add-on services including staff training, biometric integration, and payment gateway setup. View our complete <a href="/pricing/add-ons" class="text-[#06b6d4] hover:underline">add-ons page</a> for detailed pricing and descriptions.'
   }
 ];
 

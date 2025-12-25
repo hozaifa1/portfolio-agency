@@ -3,7 +3,7 @@ import { Shield, Brain, Award, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About | Synkraft Labs - Engineering Excellence',
+  title: 'About | Nexora - Engineering Excellence',
   description: 'Learn about our methodology, security standards, and the engineering rigor we apply to business software development.',
 };
 
@@ -94,7 +94,7 @@ export default function AboutPage() {
 
       <section className="py-16 bg-[#09090b]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-8">Why Choose Synkraft Labs?</h2>
+          <h2 className="text-2xl font-bold text-white mb-8">Why Choose Nexora?</h2>
           <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {[
               'Custom-built, no templates',

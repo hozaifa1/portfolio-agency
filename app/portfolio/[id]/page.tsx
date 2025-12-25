@@ -276,6 +276,134 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             </ul>
           </div>
 
+          {isERP && (
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">System Screens</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/erp/Screenshot 2025-12-20 214058.jpg"
+                      alt="Dashboard & Navigation"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Dashboard & Navigation</h3>
+                    <p className="text-sm text-slate-600">Main control center with KPI widgets and navigation</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/erp/Screenshot 2025-12-20 214151.jpg"
+                      alt="Samples Workspace"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Samples Workspace</h3>
+                    <p className="text-sm text-slate-600">Lab Dip, Strike-Off, and PP sample tracking</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/erp/Screenshot 2025-12-20 214210.jpg"
+                      alt="Local Orders Board"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Local Orders Board</h3>
+                    <p className="text-sm text-slate-600">Production tracking with real-time metrics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {isLMS && (
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">System Screens</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/lms/home.jpg"
+                      alt="Dashboard"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Home Dashboard</h3>
+                    <p className="text-sm text-slate-600">Main dashboard with analytics and quick actions</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/lms/students.jpg"
+                      alt="Student Directory"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Student Directory</h3>
+                    <p className="text-sm text-slate-600">Student management with course and major filtering</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/lms/attendance.jpg"
+                      alt="Attendance Insights"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Attendance Insights</h3>
+                    <p className="text-sm text-slate-600">Biometric integration with real-time tracking</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/lms/reportcard.jpg"
+                      alt="Report Cards"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Report Card Preview</h3>
+                    <p className="text-sm text-slate-600">Automated result generation and printing</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                  <div className="relative aspect-video">
+                    <Image
+                      src="/projects/lms/results.jpg"
+                      alt="Results Management"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">Results Console</h3>
+                    <p className="text-sm text-slate-600">Major-aware result entry with smart filtering</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {features && (
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Core Features & Modules</h2>

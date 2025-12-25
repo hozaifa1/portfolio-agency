@@ -15,7 +15,7 @@ export const projects = [
     github: "https://github.com/farihafhf/provabook-3",
     status: "Production",
     impact: {
-      clients: "1 Major Prova Fashion",
+      client: "Prova Fashion",
       efficiency: "85% Error Reduction",
       automation: "100% Automated Ledgers"
     }

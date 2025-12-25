@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Github, ArrowLeft, CheckCircle2, Package, Users, BarChart3, FileText, Shield, Zap } from 'lucide-react';
 import { projects } from '@/lib/data';
 import Contact from '@/components/Contact';
+import ProjectHeroImage from '@/components/ProjectHeroImage';
+import ProjectScreens from '@/components/ProjectScreens';
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -179,18 +180,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
 
         <div className="max-w-6xl mx-auto px-4 py-16">
-          {project.image && (
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
-              <div className="relative aspect-video">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          )}
+          {project.image && <ProjectHeroImage src={project.image} alt={project.title} />}
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {Object.entries(project.impact).map(([key, value]) => (
@@ -277,131 +267,59 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
 
           {isERP && (
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">System Screens</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/erp/Screenshot 2025-12-20 214058.jpg"
-                      alt="Dashboard & Navigation"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Dashboard & Navigation</h3>
-                    <p className="text-sm text-slate-600">Main control center with KPI widgets and navigation</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/erp/Screenshot 2025-12-20 214151.jpg"
-                      alt="Samples Workspace"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Samples Workspace</h3>
-                    <p className="text-sm text-slate-600">Lab Dip, Strike-Off, and PP sample tracking</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/erp/Screenshot 2025-12-20 214210.jpg"
-                      alt="Local Orders Board"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Local Orders Board</h3>
-                    <p className="text-sm text-slate-600">Production tracking with real-time metrics</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProjectScreens
+              title="System Screens"
+              images={[
+                {
+                  src: '/projects/erp/erp-dashboard.jpg',
+                  title: 'Dashboard & Navigation',
+                  description: 'Main control center with KPI widgets and navigation',
+                },
+                {
+                  src: '/projects/erp/erp-samples.jpg',
+                  title: 'Samples Workspace',
+                  description: 'Lab Dip, Strike-Off, and PP sample tracking',
+                },
+                {
+                  src: '/projects/erp/erp-local-orders.jpg',
+                  title: 'Local Orders Board',
+                  description: 'Production tracking with real-time metrics',
+                },
+              ]}
+            />
           )}
 
           {isLMS && (
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">System Screens</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/lms/home.jpg"
-                      alt="Dashboard"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Home Dashboard</h3>
-                    <p className="text-sm text-slate-600">Main dashboard with analytics and quick actions</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/lms/students.jpg"
-                      alt="Student Directory"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Student Directory</h3>
-                    <p className="text-sm text-slate-600">Student management with course and major filtering</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/lms/attendance.jpg"
-                      alt="Attendance Insights"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Attendance Insights</h3>
-                    <p className="text-sm text-slate-600">Biometric integration with real-time tracking</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/lms/reportcard.jpg"
-                      alt="Report Cards"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Report Card Preview</h3>
-                    <p className="text-sm text-slate-600">Automated result generation and printing</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
-                  <div className="relative aspect-video">
-                    <Image
-                      src="/projects/lms/results.jpg"
-                      alt="Results Management"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-slate-900 mb-1">Results Console</h3>
-                    <p className="text-sm text-slate-600">Major-aware result entry with smart filtering</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProjectScreens
+              title="System Screens"
+              images={[
+                {
+                  src: '/projects/lms/home.jpg',
+                  title: 'Home Dashboard',
+                  description: 'Main dashboard with analytics and quick actions',
+                },
+                {
+                  src: '/projects/lms/students.jpg',
+                  title: 'Student Directory',
+                  description: 'Student management with course and major filtering',
+                },
+                {
+                  src: '/projects/lms/attendance.jpg',
+                  title: 'Attendance Insights',
+                  description: 'Biometric integration with real-time tracking',
+                },
+                {
+                  src: '/projects/lms/reportcard.jpg',
+                  title: 'Report Card Preview',
+                  description: 'Automated result generation and printing',
+                },
+                {
+                  src: '/projects/lms/results.jpg',
+                  title: 'Results Console',
+                  description: 'Major-aware result entry with smart filtering',
+                },
+              ]}
+            />
           )}
 
           {features && (

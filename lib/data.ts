@@ -246,75 +246,69 @@ export const services = [
 
 export const pricingTiers = [
   {
-    id: "starter",
-    name: "Starter Plan",
+    id: "essentials",
+    name: "Essentials",
     price: {
       bdt: 15000,
       usd: 175
     },
     period: "month",
-    description: "Perfect for small businesses and startups",
+    description: "Small Businesses & Startups",
     features: [
-      "Basic web app development (1 page)",
-      "Mobile app consultation",
-      "Code review & optimization",
-      "Email support (24hr response)",
-      "Monthly progress reports",
-      "1 revision round"
+      "5-page website",
+      "Contact form integration",
+      "Mobile responsive",
+      "CDN hosting",
+      "SSL certificate",
+      "Monthly content updates",
+      "Email support (48hr)"
     ],
-    limitations: [
-      "Limited to 1 active project",
-      "No dedicated support"
-    ],
+    limitations: [],
     recommended: false,
-    cta: "Start Building"
+    cta: "Get Started"
   },
   {
     id: "growth",
-    name: "Growth Plan",
+    name: "Growth",
     price: {
-      bdt: 35000,
-      usd: 400
+      bdt: 40000,
+      usd: 460
     },
     period: "month",
-    description: "Ideal for growing companies and established businesses",
+    description: "Textile & Education Sector",
     features: [
-      "Full-stack web application",
-      "Basic mobile app (Android)",
-      "API integration & development",
-      "Priority support (12hr response)",
-      "Weekly progress meetings",
-      "3 revision rounds",
-      "Performance optimization",
-      "Security audit included"
+      "Full ERP/LMS system",
+      "Role-based access control",
+      "Inventory management",
+      "Automated invoicing",
+      "Financial dashboards",
+      "Daily backups",
+      "WhatsApp support",
+      "5hrs dev time/month"
     ],
     limitations: [],
     recommended: true,
-    cta: "Go Growth"
+    cta: "Get Started"
   },
   {
-    id: "enterprise",
-    name: "Enterprise Plan",
-    price: {
-      bdt: 75000,
-      usd: 850
-    },
+    id: "custom",
+    name: "Custom",
+    price: null,
     period: "month",
-    description: "For large enterprises and complex projects",
+    description: "Enterprise & Complex Projects",
     features: [
-      "Complex multi-platform solutions",
+      "Tailored to your needs",
       "AI/ML integration",
-      "Cross-platform mobile apps",
-      "Dedicated project manager",
-      "24/7 priority support",
-      "Unlimited revisions",
-      "Custom training sessions",
-      "DevOps & deployment support",
-      "Maintenance & monitoring"
+      "Multi-platform solutions",
+      "Distributed architecture",
+      "Dedicated infrastructure",
+      "24/7 premium support",
+      "Strategic consulting",
+      "Custom SLAs"
     ],
     limitations: [],
     recommended: false,
-    cta: "Contact Sales"
+    cta: "Contact for Quote"
   }
 ];
 

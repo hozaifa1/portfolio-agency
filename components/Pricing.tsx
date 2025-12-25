@@ -52,17 +52,26 @@ export default function Pricing() {
                   {tier.description}
                 </p>
 
-                <div className="mb-2">
-                  <span className={`text-5xl font-bold ${tier.recommended ? 'text-white' : 'text-cyan-400'}`}>
-                    ৳{tier.price.bdt.toLocaleString()}
-                  </span>
-                  <span className={`text-lg ${tier.recommended ? 'text-cyan-100' : 'text-slate-400'}`}>
-                    /{tier.period}
-                  </span>
-                </div>
-                <p className={`text-sm ${tier.recommended ? 'text-cyan-100' : 'text-slate-500'}`}>
-                  ~${tier.price.usd} USD
-                </p>
+                {tier.price ? (
+                  <>
+                    <div className="mb-2">
+                      <span className={`text-5xl font-bold ${tier.recommended ? 'text-white' : 'text-cyan-400'}`}>
+                        ৳{tier.price.bdt.toLocaleString()}
+                      </span>
+                      <span className={`text-lg ${tier.recommended ? 'text-cyan-100' : 'text-slate-400'}`}>
+                        /{tier.period}
+                      </span>
+                    </div>
+                    <p className={`text-sm ${tier.recommended ? 'text-cyan-100' : 'text-slate-500'}`}>
+                      ~${tier.price.usd} USD
+                    </p>
+                  </>
+                ) : (
+                  <div className="mb-2">
+                    <span className="text-3xl font-bold text-slate-300">Custom Quote</span>
+                    <p className="text-sm text-slate-500 mt-2">Contact us for pricing</p>
+                  </div>
+                )}
               </div>
 
               <ul className="space-y-3 mb-8">

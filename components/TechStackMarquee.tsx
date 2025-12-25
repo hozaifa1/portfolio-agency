@@ -1,18 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { SiNextdotjs, SiDjango, SiPostgresql, SiRust, SiDocker, SiPython, SiReact, SiTypescript, SiKotlin, SiTensorflow } from 'react-icons/si';
 
 const techStack = [
-  { name: 'Next.js', icon: 'N', color: '#000000' },
-  { name: 'Django', icon: 'D', color: '#092E20' },
-  { name: 'PostgreSQL', icon: 'P', color: '#336791' },
-  { name: 'Rust', icon: 'R', color: '#CE422B' },
-  { name: 'Docker', icon: 'D', color: '#2496ED' },
-  { name: 'Python', icon: 'Py', color: '#3776AB' },
-  { name: 'React', icon: 'R', color: '#61DAFB' },
-  { name: 'TypeScript', icon: 'TS', color: '#3178C6' },
-  { name: 'Kotlin', icon: 'K', color: '#7F52FF' },
-  { name: 'TensorFlow', icon: 'TF', color: '#FF6F00' },
+  { name: 'Next.js', Icon: SiNextdotjs, color: '#000000' },
+  { name: 'Django', Icon: SiDjango, color: '#092E20' },
+  { name: 'PostgreSQL', Icon: SiPostgresql, color: '#336791' },
+  { name: 'Rust', Icon: SiRust, color: '#CE422B' },
+  { name: 'Docker', Icon: SiDocker, color: '#2496ED' },
+  { name: 'Python', Icon: SiPython, color: '#3776AB' },
+  { name: 'React', Icon: SiReact, color: '#61DAFB' },
+  { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
+  { name: 'Kotlin', Icon: SiKotlin, color: '#7F52FF' },
+  { name: 'TensorFlow', Icon: SiTensorflow, color: '#FF6F00' },
 ];
 
 export default function TechStackMarquee() {
@@ -26,7 +27,7 @@ export default function TechStackMarquee() {
         </p>
       </div>
       
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden py-4">
         <div className="flex">
           <motion.div
             className="flex gap-12 pr-12"
@@ -42,29 +43,27 @@ export default function TechStackMarquee() {
               },
             }}
           >
-            {duplicatedTech.map((tech, idx) => (
-              <div
-                key={idx}
-                className="flex items-center justify-center min-w-[120px] h-16 group cursor-pointer"
-              >
-                <div className="text-center transition-all duration-300">
-                  <div 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-2 mx-auto font-bold text-lg transition-all duration-300 grayscale group-hover:grayscale-0"
-                    style={{ 
-                      backgroundColor: `${tech.color}20`,
-                      color: tech.color,
-                      borderWidth: '2px',
-                      borderColor: `${tech.color}40`
-                    }}
-                  >
-                    {tech.icon}
+            {duplicatedTech.map((tech, idx) => {
+              const IconComponent = tech.Icon;
+              return (
+                <div
+                  key={idx}
+                  className="flex items-center justify-center min-w-[140px] group cursor-pointer"
+                >
+                  <div className="text-center transition-all duration-300">
+                    <div className="flex items-center justify-center mb-3 grayscale group-hover:grayscale-0 transition-all duration-300">
+                      <IconComponent 
+                        className="w-12 h-12" 
+                        style={{ color: tech.color }}
+                      />
+                    </div>
+                    <span className="text-xs font-mono text-slate-500 group-hover:text-[#06b6d4] transition-colors block">
+                      {tech.name}
+                    </span>
                   </div>
-                  <span className="text-xs font-mono text-slate-500 group-hover:text-[#06b6d4] transition-colors">
-                    {tech.name}
-                  </span>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </motion.div>
         </div>
       </div>

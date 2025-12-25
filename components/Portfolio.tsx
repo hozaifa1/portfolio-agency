@@ -7,10 +7,11 @@ import Link from 'next/link';
 import { projects } from '@/lib/data';
 
 export default function Portfolio() {
-  // Show only featured projects: ERP, LMS, StreamSync, Ecommerce
-  const featuredProjects = projects.filter(p => 
-    ['prova-erp', 'igmis-lms', 'streamsync', 'ecommerce-platform'].includes(p.id)
-  );
+  // Show only featured projects in specific order: ERP, LMS, Ecommerce, StreamSync
+  const projectOrder = ['prova-erp', 'igmis-lms', 'ecommerce-platform', 'streamsync'];
+  const featuredProjects = projectOrder
+    .map(id => projects.find(p => p.id === id))
+    .filter(Boolean) as typeof projects;
 
   return (
     <section id="portfolio" className="py-24 bg-slate-900/50 relative">

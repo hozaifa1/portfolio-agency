@@ -335,9 +335,9 @@ export const pricingTiers = [
 ];
 
 export const addOns = [
-  { name: 'Staff Training', price: 99, description: 'On-site or Zoom training for employees (per session)' },
-  { name: 'Biometric Integration', price: 199, description: 'Hardware linking (fingerprint scanners) for attendance systems' },
-  { name: 'Payment Gateway', price: 299, description: 'Payment gateway integration with major providers' }
+  { name: 'Staff Training', price: 83, description: 'On-site or Zoom training for employees (per session) - All inclusive' },
+  { name: 'Biometric Integration', price: 167, description: 'Hardware linking (fingerprint scanners) - Platform/software integration costs not included' },
+  { name: 'Payment Gateway', price: 250, description: 'Complete payment gateway integration including SSL commerce and other providers' }
 ];
 
 export const faqs = [
@@ -363,7 +363,7 @@ export const faqs = [
   },
   {
     question: 'Is there a setup or implementation fee?',
-    answer: 'Yes, there are one-time setup costs. For Essentials websites, the setup cost is $170. For Growth systems (ERP/LMS), the implementation cost is $410. View our complete <a href="/pricing/setup-costs" class="text-[#06b6d4] hover:underline">setup costs page</a> for detailed breakdown.'
+    answer: 'Setup costs vary based on project complexity and are quoted separately. The monthly pricing covers ongoing hosting, maintenance, updates, and support. View our complete <a href="/pricing/setup-costs" class="text-[#06b6d4] hover:underline">setup costs page</a> for a detailed breakdown of one-time implementation fees.'
   },
   {
     question: 'What additional services are available?',

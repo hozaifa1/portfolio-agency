@@ -37,8 +37,8 @@ export default function SetupCostsPage() {
       </section>
 
       <section className="py-16 bg-slate-900/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,6 +78,49 @@ export default function SetupCostsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
+              className="bg-[#09090b] border-2 border-slate-800 rounded-xl p-8 hover:border-[#06b6d4] transition-all"
+            >
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">E-commerce Setup</h3>
+                <p className="text-slate-400 text-sm">For online stores</p>
+              </div>
+              <div className="mb-6">
+                <div className="text-5xl font-bold text-[#06b6d4] mb-2">$350<span className="text-2xl">+</span></div>
+                <p className="text-slate-500 text-sm">Starting price based on scope</p>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-[#06b6d4] flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">Up to 50 products: $350</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-[#06b6d4] flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">51-200 products: $550</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-[#06b6d4] flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">200+ products: Custom quote</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-[#06b6d4] flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">Product catalog setup</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-[#06b6d4] flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">Payment gateway integration</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-[#06b6d4] flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300 text-sm">Inventory management setup</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
               className="bg-[#09090b] border-2 border-[#06b6d4] rounded-xl p-8 relative"
             >
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#06b6d4] text-white px-4 py-1 rounded-full text-xs font-bold">

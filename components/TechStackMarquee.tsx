@@ -3,16 +3,16 @@
 import { motion } from 'framer-motion';
 
 const techStack = [
-  { name: 'Next.js', logo: '/tech/nextjs.svg' },
-  { name: 'Django', logo: '/tech/django.svg' },
-  { name: 'PostgreSQL', logo: '/tech/postgresql.svg' },
-  { name: 'Rust', logo: '/tech/rust.svg' },
-  { name: 'Docker', logo: '/tech/docker.svg' },
-  { name: 'Python', logo: '/tech/python.svg' },
-  { name: 'React', logo: '/tech/react.svg' },
-  { name: 'TypeScript', logo: '/tech/typescript.svg' },
-  { name: 'Kotlin', logo: '/tech/kotlin.svg' },
-  { name: 'TensorFlow', logo: '/tech/tensorflow.svg' },
+  { name: 'Next.js', icon: 'N', color: '#000000' },
+  { name: 'Django', icon: 'D', color: '#092E20' },
+  { name: 'PostgreSQL', icon: 'P', color: '#336791' },
+  { name: 'Rust', icon: 'R', color: '#CE422B' },
+  { name: 'Docker', icon: 'D', color: '#2496ED' },
+  { name: 'Python', icon: 'Py', color: '#3776AB' },
+  { name: 'React', icon: 'R', color: '#61DAFB' },
+  { name: 'TypeScript', icon: 'TS', color: '#3178C6' },
+  { name: 'Kotlin', icon: 'K', color: '#7F52FF' },
+  { name: 'TensorFlow', icon: 'TF', color: '#FF6F00' },
 ];
 
 export default function TechStackMarquee() {
@@ -45,11 +45,23 @@ export default function TechStackMarquee() {
             {duplicatedTech.map((tech, idx) => (
               <div
                 key={idx}
-                className="flex items-center justify-center min-w-[120px] h-16 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group"
+                className="flex items-center justify-center min-w-[120px] h-16 group cursor-pointer"
               >
-                <div className="text-slate-500 group-hover:text-[#06b6d4] transition-colors text-center">
-                  <div className="text-3xl mb-1">⚡</div>
-                  <span className="text-sm font-mono">{tech.name}</span>
+                <div className="text-center transition-all duration-300">
+                  <div 
+                    className="w-10 h-10 rounded-lg flex items-center justify-center mb-2 mx-auto font-bold text-lg transition-all duration-300 grayscale group-hover:grayscale-0"
+                    style={{ 
+                      backgroundColor: `${tech.color}20`,
+                      color: tech.color,
+                      borderWidth: '2px',
+                      borderColor: `${tech.color}40`
+                    }}
+                  >
+                    {tech.icon}
+                  </div>
+                  <span className="text-xs font-mono text-slate-500 group-hover:text-[#06b6d4] transition-colors">
+                    {tech.name}
+                  </span>
                 </div>
               </div>
             ))}

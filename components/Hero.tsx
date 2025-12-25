@@ -15,7 +15,6 @@ const generateParticles = () =>
   }));
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [particles, setParticles] = useState<Array<{
     id: number;
     left: number;
@@ -27,24 +26,11 @@ export default function Hero() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setParticles(generateParticles());
-    
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#09090b]">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
-      
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(6, 182, 212, 0.15), transparent 40%)`
-        }}
-      ></div>
       
       <div className="absolute inset-0">
         {particles.map((particle) => (

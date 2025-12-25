@@ -44,10 +44,10 @@ export default function ProjectScreens({ title, images }: ProjectScreensProps) {
       </div>
 
       {activeImage && (
-        <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-black/80" onClick={() => setActiveImage(null)}></div>
+        <div className="fixed inset-0 z-50" onClick={() => setActiveImage(null)}>
+          <div className="absolute inset-0 bg-black/80"></div>
           <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
-            <div className="bg-slate-900 rounded-2xl max-w-5xl w-full p-6 shadow-2xl">
+            <div className="bg-slate-900 rounded-2xl max-w-5xl w-full p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
               <div className="flex justify-between items-center mb-4">
                 <div>
                   <h3 className="text-2xl font-bold text-white">{activeImage.title}</h3>

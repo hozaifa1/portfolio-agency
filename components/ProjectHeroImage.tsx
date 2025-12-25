@@ -30,10 +30,10 @@ export default function ProjectHeroImage({ src, alt }: ProjectHeroImageProps) {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-black/80" onClick={() => setOpen(false)}></div>
+        <div className="fixed inset-0 z-50" onClick={() => setOpen(false)}>
+          <div className="absolute inset-0 bg-black/80"></div>
           <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
-            <div className="bg-slate-900 rounded-2xl max-w-6xl w-full p-6 shadow-2xl">
+            <div className="bg-slate-900 rounded-2xl max-w-6xl w-full p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-2xl font-bold text-white">{alt}</h3>
                 <button

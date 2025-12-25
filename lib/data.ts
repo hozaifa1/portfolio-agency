@@ -249,7 +249,7 @@ export const pricingTiers = [
     id: "essentials",
     name: "Essentials",
     price: {
-      bdt: 15000,
+      bdt: 20000,
       usd: 175
     },
     period: "month",

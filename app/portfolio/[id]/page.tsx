@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, ExternalLink, ArrowLeft } from 'lucide-react';
+import { Github, ArrowLeft } from 'lucide-react';
 import { projects } from '@/lib/data';
 import Contact from '@/components/Contact';
 

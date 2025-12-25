@@ -36,7 +36,7 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: idx * 0.1 }}
             >
               {project.image && (
-                <div className="lg:w-1/2">
+                <div className="w-full lg:w-1/2">
                   <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 group">
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 group-hover:opacity-0 transition-opacity"></div>
                     <Image
@@ -53,7 +53,7 @@ export default function Portfolio() {
                 </div>
               )}
 
-              <div className="lg:w-1/2 space-y-4">
+              <div className={`${project.image ? 'lg:w-1/2' : 'lg:w-full'} space-y-4`}>
                 <div className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-semibold">
                   {project.category}
                 </div>

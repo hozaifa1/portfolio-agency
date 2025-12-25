@@ -30,7 +30,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Let's Build Something Great
+            Let&apos;s Build Something Great
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Get a free consultation and project estimate within 24 hours

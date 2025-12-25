@@ -3,9 +3,19 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   const [particles] = useState(() => 
     [...Array(50)].map((_, i) => ({
       id: i,
@@ -17,8 +27,15 @@ export default function Hero() {
   );
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#09090b]">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+      
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(6, 182, 212, 0.15), transparent 40%)`
+        }}
+      ></div>
       
       <div className="absolute inset-0">
         {particles.map((particle) => (
@@ -54,19 +71,19 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Transforming Ideas into
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              Scalable Digital Solutions
+            Engineering Intelligence for
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-cyan-300">
+              Bangladeshi Enterprises
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Full-stack development, AI/ML integration, and cross-platform solutions from Dhaka to the world
+            We don&apos;t just build websites. We build automated ERPs, LMS platforms, and System Solutions that save you money.
           </motion.p>
 
           <motion.div
@@ -76,17 +93,17 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Link
-              href="#contact"
-              className="group px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full font-semibold text-lg transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-cyan-500/50"
+              href="/pricing"
+              className="group px-8 py-4 bg-[#06b6d4] hover:bg-cyan-500 text-white rounded-lg font-semibold text-lg transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-[#06b6d4]/50"
             >
-              Get Free Consultation
+              View Service Plans
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/portfolio"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 rounded-full font-semibold text-lg transition-all"
+              className="px-8 py-4 border-2 border-[#06b6d4] text-[#06b6d4] hover:bg-[#06b6d4] hover:text-[#09090b] rounded-lg font-semibold text-lg transition-all"
             >
-              View Portfolio
+              Read Case Studies
             </Link>
           </motion.div>
 

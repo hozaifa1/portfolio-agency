@@ -9,14 +9,29 @@ export default function Contact() {
     name: '',
     email: '',
     company: '',
+    phone: '',
     budget: '',
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you! We will get back to you within 24 hours.');
+    try {
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        alert('Thank you! We will get back to you within 24 hours.');
+        setFormData({ name: '', email: '', company: '', phone: '', budget: '', message: '' });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error. Please email us directly at 20hozaifa02@gmail.com');
+    }
   };
 
   return (
@@ -128,14 +143,30 @@ export default function Contact() {
 
             <div>
               <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-2">
-                Company / Organization
+                Company / Organization *
               </label>
               <input
                 type="text"
                 id="company"
+                required
                 className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
+                Phone Number *
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                required
+                placeholder="+880 1XXX XXXXXX"
+                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               />
             </div>
 
@@ -145,21 +176,20 @@ export default function Contact() {
               </label>
               <select
                 id="budget"
-                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors bg-white text-slate-900"
                 value={formData.budget}
                 onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
               >
                 <option value="">Select budget range</option>
-                <option value="starter">৳15,000 - ৳30,000/month (Starter)</option>
-                <option value="growth">৳30,000 - ৳50,000/month (Growth)</option>
-                <option value="enterprise">৳50,000+/month (Enterprise)</option>
-                <option value="custom">Custom / One-time Project</option>
+                <option value="essentials">৳15,000/month - Essentials (৳50,000 implementation)</option>
+                <option value="growth">৳40,000/month - Growth (৳75,000 implementation)</option>
+                <option value="sovereign">৳60,000+/month - Sovereign (৳1.5 Lakh+ implementation)</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
-                Project Details *
+                What is your biggest operational pain point? *
               </label>
               <textarea
                 id="message"
@@ -168,7 +198,7 @@ export default function Contact() {
                 className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors resize-none"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                placeholder="Tell us about your project, timeline, and any specific requirements..."
+                placeholder="e.g., Manual inventory tracking, payroll errors, student record management..."
               />
             </div>
 

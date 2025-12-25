@@ -15,9 +15,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TechNova Solutions | Software Development Agency Bangladesh",
-  description: "Full-stack web development, mobile apps, AI/ML integration, and cross-platform solutions. Premium software agency based in Dhaka, Bangladesh.",
-  keywords: ["software development", "web development", "mobile apps", "AI/ML", "Bangladesh", "Dhaka", "Next.js", "Django", "React"],
+  title: "HZH Systems | Custom Software for Textile and Education Sectors Bangladesh",
+  description: "Custom software for textile and education sectors. Automate your business with HZH Systems. We build ERPs, LMS platforms, and Distributed AI systems that save you money. Based in Dhaka, Bangladesh.",
+  keywords: [
+    "ERP software Bangladesh",
+    "LMS platform Bangladesh",
+    "textile ERP",
+    "education management system",
+    "custom software development Dhaka",
+    "business automation Bangladesh",
+    "inventory management system",
+    "Django development",
+    "Next.js development",
+    "Python automation",
+    "AI integration Bangladesh"
+  ],
+  authors: [{ name: "S. M. Hozaifa Hossain" }],
+  openGraph: {
+    title: "HZH Systems - Engineering Intelligence for Bangladeshi Enterprises",
+    description: "We build automated ERPs, LMS platforms, and Distributed AI systems that save you money.",
+    locale: "en_BD",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

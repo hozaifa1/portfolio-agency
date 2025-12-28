@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-[#06b6d4] font-mono">Nexora</h3>
             <p className="text-slate-400">
-              Engineering Intelligence for Bangladeshi Enterprises. We build automated ERPs, LMS platforms, and Distributed AI systems.
+              Engineering intelligence for ambitious enterprises worldwide. We build automated ERPs, LMS platforms, and Distributed AI systems.
             </p>
           </div>
 

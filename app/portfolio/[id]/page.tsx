@@ -292,8 +292,8 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 },
                 {
                   src: '/projects/erp/erp-local-orders.jpg',
-                  title: 'Local Orders Board',
-                  description: 'Production tracking with real-time metrics',
+                  title: 'Delivery Notifications Console',
+                  description: 'Delivery alert stream with notification history',
                 },
               ]}
             />

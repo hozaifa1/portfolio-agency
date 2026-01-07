@@ -27,7 +27,7 @@ const techStack = [
 ];
 
 export default function TechStackMarquee() {
-  const duplicatedTech = [...techStack, ...techStack, ...techStack];
+  const duplicatedTech = [...techStack, ...techStack];
 
   return (
     <section className="py-12 bg-[#09090b] border-y border-slate-800">
@@ -38,44 +38,42 @@ export default function TechStackMarquee() {
       </div>
       
       <div className="relative overflow-hidden py-4">
-        <div className="flex">
-          <motion.div
-            className="flex gap-12 pr-12"
-            animate={{
-              x: [0, `-${techStack.length * 152}px`],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 40,
-                ease: "linear",
-              },
-            }}
-          >
-            {duplicatedTech.map((tech, idx) => {
-              const IconComponent = tech.Icon;
-              return (
-                <div
-                  key={idx}
-                  className="flex items-center justify-center min-w-[140px] group cursor-pointer"
-                >
-                  <div className="text-center transition-all duration-300">
-                    <div className="flex items-center justify-center mb-2 grayscale group-hover:grayscale-0 transition-all duration-300">
-                      <IconComponent 
-                        className="w-10 h-10" 
-                        style={{ color: tech.color }}
-                      />
-                    </div>
-                    <span className="text-xs font-mono text-slate-500 group-hover:text-[#06b6d4] transition-colors block">
-                      {tech.name}
-                    </span>
+        <motion.div
+          className="flex gap-12"
+          animate={{
+            x: [0, `-${(techStack.length * 152)}px`],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 40,
+              ease: "linear",
+            },
+          }}
+        >
+          {duplicatedTech.map((tech, idx) => {
+            const IconComponent = tech.Icon;
+            return (
+              <div
+                key={idx}
+                className="flex items-center justify-center min-w-[140px] group cursor-pointer flex-shrink-0"
+              >
+                <div className="text-center transition-all duration-300">
+                  <div className="flex items-center justify-center mb-2 grayscale group-hover:grayscale-0 transition-all duration-300">
+                    <IconComponent 
+                      className="w-10 h-10" 
+                      style={{ color: tech.color }}
+                    />
                   </div>
+                  <span className="text-xs font-mono text-slate-500 group-hover:text-[#06b6d4] transition-colors block">
+                    {tech.name}
+                  </span>
                 </div>
-              );
-            })}
-          </motion.div>
-        </div>
+              </div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );

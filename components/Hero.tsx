@@ -77,7 +77,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            We build automated ERPs, LMS platforms, and AI-powered solutions that save you money.
+            We build automated ERPs, LMS platforms, and AI-powered solutions that reduce operational costs.
           </motion.p>
 
           <motion.div
@@ -88,20 +88,20 @@ export default function Hero() {
           >
             <Link
               href="/portfolio"
-              className="group px-6 py-3 bg-[#06b6d4] hover:bg-cyan-500 text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-[#06b6d4]/50"
+              className="group px-6 py-3 border-2 border-[#06b6d4] bg-[#06b6d4] text-white hover:bg-cyan-500 hover:border-cyan-500 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
             >
               What We Did
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="#contact"
-              className="px-6 py-3 border-2 border-[#06b6d4] text-[#06b6d4] hover:bg-[#06b6d4] hover:text-[#09090b] rounded-lg font-semibold transition-all"
+              className="px-6 py-3 border-2 border-[#06b6d4] text-[#06b6d4] hover:bg-[#06b6d4] hover:text-white rounded-lg font-semibold transition-all"
             >
               Get Started
             </Link>
             <Link
               href="/pricing"
-              className="px-6 py-3 text-slate-400 hover:text-[#06b6d4] rounded-lg font-semibold transition-all border border-slate-700 hover:border-[#06b6d4]"
+              className="px-6 py-3 border-2 border-[#06b6d4] text-[#06b6d4] hover:bg-[#06b6d4] hover:text-white rounded-lg font-semibold transition-all"
             >
               Pricing
             </Link>

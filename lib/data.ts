@@ -7,7 +7,7 @@ export const projects = [
     description: "Engineered a full-scale ERP automating inventory, order tracking, and financial reporting for Prova Fashion.",
     highlights: [
       "Built custom modules for supplier ledgers and fabric stock",
-      "Replaced manual systems and reduced accounting errors by 85%",
+      "Digitized LC, PI, and payment approvals with audit-ready trails",
       "Real-time inventory tracking with automatic reorder alerts"
     ],
     tech: ["Next.js", "Django", "PostgreSQL", "Cloudflare R2", "DigitalOcean"],
@@ -15,9 +15,8 @@ export const projects = [
     github: "https://github.com/farihafhf/provabook-3",
     status: "Production",
     impact: {
-      client: "Prova Fashion",
-      efficiency: "85% Error Reduction",
-      automation: "100% Automated Ledgers"
+      compliance: "LC & Invoice Audit Trails",
+      automation: "Automated Ledgers & Stock Alerts"
     }
   },
   {

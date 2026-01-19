@@ -1,8 +1,9 @@
 import { Phone, Mail, CheckCircle2, XCircle, ArrowRight, LayoutDashboard, Users, FileSpreadsheet, GraduationCap, ClipboardCheck, UserPlus, Wallet, Award } from 'lucide-react';
+import DownloadPDFButton from '@/components/DownloadPDFButton';
 
 export default function LMSPage() {
   return (
-    <main className="min-h-[100dvh] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1e1b4b] via-[#020617] to-[#020617] text-slate-200 overflow-x-hidden flex flex-col px-4 sm:px-6 lg:px-8 py-10 lg:py-0 relative selection:bg-teal-500/30">
+    <main id="lms-content" className="min-h-[100dvh] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1e1b4b] via-[#020617] to-[#020617] text-slate-200 overflow-x-hidden flex flex-col px-4 sm:px-6 lg:px-8 py-10 lg:py-0 relative selection:bg-teal-500/30">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
       
@@ -156,6 +157,7 @@ export default function LMSPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 text-sm w-full md:w-auto">
+              <DownloadPDFButton />
               <a 
                 href="mailto:20hozaifa02@gmail.com" 
                 className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-slate-300 hover:text-white"

@@ -16,7 +16,7 @@ const iconMap = {
 
 const serviceToProjectMap: Record<string, string> = {
   'textile-erp': 'prova-erp',
-  'lms': 'igmis-lms',
+  'lms': 'sm-lms',
   'ai-ml': 'waiter-detection',
   'desktop-apps': 'torbiz',
   'mobile-apps': 'streamsync',

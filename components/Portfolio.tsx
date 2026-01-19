@@ -8,7 +8,7 @@ import { projects } from '@/lib/data';
 
 export default function Portfolio() {
   // Show only featured projects in specific order: ERP, LMS, Ecommerce, StreamSync
-  const projectOrder = ['prova-erp', 'igmis-lms', 'ecommerce-platform', 'streamsync'];
+  const projectOrder = ['prova-erp', 'sm-lms', 'ecommerce-platform', 'streamsync'];
   const featuredProjects = projectOrder
     .map(id => projects.find(p => p.id === id))
     .filter(Boolean) as typeof projects;

@@ -20,23 +20,23 @@ export const projects = [
     }
   },
   {
-    id: "igmis-lms",
-    title: "University Learning Management System",
-    client: "IGMIS College, Chattogram",
+    id: "sm-lms",
+    title: "SM LMS",
+    client: "Multiple Institutions",
     category: "Academic / Production",
-    description: "Deployed an LMS for an institution affiliated with National University serving BBA, MBA, CSE, and THM programs.",
+    description: "Deployed a centralized Learning Management System for institutions managing academic lifecycles.",
     highlights: [
-      "Integrated biometric attendance sync for 500+ students",
+      "Integrated biometric attendance sync",
       "Automated result generation securing academic payment processing",
-      "Multi-program curriculum management (BBA, MBA, CSE, THM)"
+      "Multi-program curriculum management"
     ],
     tech: ["Next.js", "Django", "PostgreSQL", "Cloudinary", "Vercel"],
-    image: "/projects/igmis-lms.png",
+    image: "/projects/sm-lms.png",
     github: "https://github.com/hozaifa1/uni-management-sys",
     status: "Production",
     impact: {
       users: "500+ Students & Staff",
-      programs: "4 Academic Programs",
+      programs: "Academic Programs",
       uptime: "99.9% Availability"
     }
   },
@@ -298,7 +298,7 @@ export const pricingTiers = [
     period: "month",
     description: "Growing Businesses",
     features: [
-      "Full ERP/LMS system",
+      "Full ERP/SM LMS system",
       "Role-based access control",
       "Inventory management",
       "Automated invoicing",

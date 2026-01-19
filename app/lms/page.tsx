@@ -8,7 +8,7 @@ export default function LMSPage() {
         {/* Header Section */}
         <div className="space-y-2">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono tracking-tight text-white">
-            NEXORA LMS
+            SM LMS
           </h1>
           <h2 className="text-xl sm:text-2xl font-semibold text-slate-200">
             One System for Academic Operations

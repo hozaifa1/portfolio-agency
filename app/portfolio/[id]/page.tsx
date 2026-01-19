@@ -159,7 +159,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   }
 
   const isERP = project.id === 'prova-erp';
-  const isLMS = project.id === 'igmis-lms';
+  const isLMS = project.id === 'sm-lms';
   const features = isERP ? erpFeatures : isLMS ? lmsFeatures : null;
 
   return (

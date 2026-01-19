@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     "custom software development",
     "ERP software development",
     "ERP development company",
+    "SM LMS",
     "LMS platform",
     "learning management system",
     "education management system",

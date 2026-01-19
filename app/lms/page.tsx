@@ -2,11 +2,11 @@ import { Phone, Mail, CheckCircle2, XCircle, ArrowRight, LayoutDashboard, Users,
 
 export default function LMSPage() {
   return (
-    <main className="h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1e1b4b] via-[#020617] to-[#020617] text-slate-200 overflow-x-hidden flex flex-col justify-center px-4 sm:px-6 lg:px-8 relative selection:bg-teal-500/30">
+    <main className="min-h-[100dvh] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1e1b4b] via-[#020617] to-[#020617] text-slate-200 overflow-x-hidden flex flex-col px-4 sm:px-6 lg:px-8 py-10 lg:py-0 relative selection:bg-teal-500/30">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
       
-      <div className="max-w-7xl mx-auto w-full flex flex-col justify-between gap-6 sm:gap-8 relative z-10">
+      <div className="max-w-7xl mx-auto w-full lg:my-auto flex flex-col gap-6 sm:gap-8 relative z-10">
         
         {/* Header Section */}
         <div className="space-y-2 border-l-2 border-teal-500 pl-4">

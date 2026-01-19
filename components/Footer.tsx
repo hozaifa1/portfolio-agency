@@ -1,6 +1,18 @@
+'use client';
+
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // Hide footer completely on LMS page
+  const shouldHide = pathname === '/lms';
+
+  if (shouldHide) {
+    return null;
+  }
+
   return (
     <footer className="bg-[#09090b] border-t border-slate-800 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

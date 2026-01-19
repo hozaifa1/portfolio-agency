@@ -1,4 +1,4 @@
-import { Phone, Mail, CheckCircle2, XCircle, ArrowRight, LayoutDashboard, Users, FileSpreadsheet, GraduationCap, ClipboardCheck } from 'lucide-react';
+import { Phone, Mail, CheckCircle2, XCircle, ArrowRight, LayoutDashboard, Users, FileSpreadsheet, GraduationCap, ClipboardCheck, UserPlus, Wallet, Award } from 'lucide-react';
 
 export default function LMSPage() {
   return (
@@ -10,13 +10,16 @@ export default function LMSPage() {
         
         {/* Header Section */}
         <div className="space-y-2 border-l-2 border-teal-500 pl-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono tracking-tight text-white">
+          <h1 className="flex flex-wrap items-baseline gap-3 text-3xl sm:text-4xl md:text-5xl font-bold font-mono tracking-tight text-white">
             SM LMS
+            <span className="text-[10px] sm:text-xs font-sans font-normal text-teal-400/80 tracking-widest uppercase border border-teal-500/30 px-2 py-0.5 rounded-full">
+              Learning Management System
+            </span>
           </h1>
           <h2 className="text-lg sm:text-xl font-medium text-slate-300">
-            One System for <span className="text-teal-400">Academic Operations</span>
+            One Platform for <span className="text-teal-400">Academic & Administrative Operations</span>
           </h2>
-          <p className="text-slate-400 text-xs sm:text-sm max-w-xl leading-relaxed">
+          <p className="text-teal-100/90 text-sm sm:text-base font-medium max-w-2xl leading-relaxed bg-teal-900/10 p-2 rounded-lg border border-teal-500/10 backdrop-blur-sm">
             Streamline your entire institution—from admissions to results—with a platform built for modern education.
           </p>
         </div>
@@ -53,7 +56,8 @@ export default function LMSPage() {
                   "Prepare exams 3x faster with automation",
                   "Save 2-3 days per exam cycle",
                   "Maintain clean, audit-ready records",
-                  "Scale effortlessly from 50 to 5,000+ students"
+                  "Scale effortlessly from 50 to 5,000+ students",
+                  "Fully tailor-made architecture customizable to your institution's specific needs"
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 group">
                     <div className="mt-1 w-1.5 h-1.5 rounded-full bg-teal-500 group-hover:scale-125 transition-transform" />
@@ -78,14 +82,18 @@ export default function LMSPage() {
                 A centralized ecosystem managing the <span className="text-teal-400 font-medium">entire academic lifecycle</span>:
               </p>
               
-              <div className="flex items-center gap-2 text-xs sm:text-sm font-mono text-slate-400 bg-black/20 p-2 rounded-lg border border-white/5 w-fit">
-                <span>Setup</span>
+              <div className="flex flex-wrap items-center gap-2 text-[10px] sm:text-xs font-mono text-slate-400 bg-black/20 p-3 rounded-lg border border-white/5 w-fit">
+                <span className="text-blue-400">Admissions</span>
                 <ArrowRight className="w-3 h-3 text-slate-600" />
-                <span>Attendance</span>
+                <span className="text-indigo-400">Login</span>
                 <ArrowRight className="w-3 h-3 text-slate-600" />
-                <span>Exams</span>
+                <span className="text-emerald-400">Attendance</span>
                 <ArrowRight className="w-3 h-3 text-slate-600" />
-                <span>Results</span>
+                <span className="text-amber-400">Accounts</span>
+                <ArrowRight className="w-3 h-3 text-slate-600" />
+                <span className="text-purple-400">Exams</span>
+                <ArrowRight className="w-3 h-3 text-slate-600" />
+                <span className="text-rose-400">Results</span>
               </div>
             </div>
 
@@ -97,22 +105,23 @@ export default function LMSPage() {
               
               <div className="relative py-8 px-4 bg-white/5 rounded-2xl border border-white/5 backdrop-blur-sm">
                 {/* Connecting Line */}
-                <div className="absolute top-1/2 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-teal-500/50 to-transparent -translate-y-1/2 hidden sm:block"></div>
+                <div className="absolute top-1/2 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-teal-500/50 to-transparent -translate-y-1/2 hidden md:block"></div>
                 
-                <div className="relative grid grid-cols-2 sm:grid-cols-5 gap-4 items-center justify-items-center">
+                <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 items-center justify-items-center">
                   {[
-                    { label: "Student", icon: Users, color: "text-blue-400", border: "border-blue-500/30" },
+                    { label: "Admissions", icon: UserPlus, color: "text-blue-400", border: "border-blue-500/30" },
                     { label: "Attendance", icon: ClipboardCheck, color: "text-emerald-400", border: "border-emerald-500/30", offset: true },
-                    { label: "Exams", icon: FileSpreadsheet, color: "text-purple-400", border: "border-purple-500/30" },
-                    { label: "Reports", icon: GraduationCap, color: "text-amber-400", border: "border-amber-500/30", offset: true },
-                    { label: "Results", icon: CheckCircle2, color: "text-rose-400", border: "border-rose-500/30", colSpan: true }
+                    { label: "Accounts", icon: Wallet, color: "text-amber-400", border: "border-amber-500/30" },
+                    { label: "Exams", icon: FileSpreadsheet, color: "text-purple-400", border: "border-purple-500/30", offset: true },
+                    { label: "Results", icon: CheckCircle2, color: "text-rose-400", border: "border-rose-500/30" },
+                    { label: "Reports", icon: GraduationCap, color: "text-cyan-400", border: "border-cyan-500/30", offset: true }
                   ].map((item, index) => (
                     <div 
                       key={index}
                       className={`
                         relative z-10 w-full flex justify-center
-                        ${item.colSpan ? 'col-span-2 sm:col-span-1' : 'col-span-1'}
-                        ${item.offset ? 'sm:translate-y-8' : ''}
+                        col-span-1
+                        ${item.offset ? 'md:translate-y-8' : ''}
                       `}
                     >
                       <div className={`

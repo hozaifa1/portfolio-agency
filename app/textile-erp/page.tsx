@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     "ready-made garment ERP"
   ],
   openGraph: {
-    title: "Textile ERP System - Complete Supply Chain Solution",
-    description: "Transform your textile business with our comprehensive ERP system. Manage orders, inventory, production, and finances seamlessly.",
+    title: "Provabook – Production Control for Modern Buying Houses",
+    description: "Stop chasing updates. Start controlling production. Real-time production visibility from inquiry to shipment.",
     type: "website",
   },
 };
@@ -62,6 +62,76 @@ export default function TextileERP() {
             >
               View Case Study
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#09090b]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              See Provabook in Action
+            </h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              Real screenshots from the production system
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+              <img src="/projects/provabook/Screenshot 2025-12-20 214058.jpg" alt="Dashboard & Navigation" className="w-full h-auto" />
+              <div className="p-4">
+                <h3 className="text-white font-semibold mb-1">Dashboard & Navigation</h3>
+                <p className="text-slate-400 text-sm">Centralized command center for all operations</p>
+              </div>
+            </div>
+            <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+              <img src="/projects/provabook/Screenshot 2025-12-20 214151.jpg" alt="Sample Orders" className="w-full h-auto" />
+              <div className="p-4">
+                <h3 className="text-white font-semibold mb-1">Sample Orders</h3>
+                <p className="text-slate-400 text-sm">Track sample development workflows</p>
+              </div>
+            </div>
+            <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+              <img src="/projects/provabook/Screenshot 2025-12-20 214210.jpg" alt="Notifications" className="w-full h-auto" />
+              <div className="p-4">
+                <h3 className="text-white font-semibold mb-1">Notifications</h3>
+                <p className="text-slate-400 text-sm">Real-time alerts for critical updates</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Recent Power-Ups (Latest Updates)
+            </h3>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              We don't just maintain; we evolve. Here's what we deployed this week to give you tighter control:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+              <img src="/projects/provabook/calculationPopup.jpg" alt="Precision Loss Tracking" className="w-full h-auto" />
+              <div className="p-4">
+                <h3 className="text-white font-semibold mb-2">📉 Precision Loss Tracking</h3>
+                <p className="text-slate-400 text-sm">New algorithms calculate Process Loss % and Mixed Fabric usage automatically. See exactly how much raw material is being wasted per order.</p>
+              </div>
+            </div>
+            <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+              <img src="/projects/provabook/deliveries&productiontab.jpg" alt="Production Progress" className="w-full h-auto" />
+              <div className="p-4">
+                <h3 className="text-white font-semibold mb-2">📊 True-Finish Progress Bars</h3>
+                <p className="text-slate-400 text-sm">Production progress calculated against Finished Fabric targets, giving you a brutally honest view of how close you are to shipment.</p>
+              </div>
+            </div>
+            <div className="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+              <img src="/projects/provabook/orderDetail_LineCard_Timelines.jpg" alt="The Mega-Timeline" className="w-full h-auto" />
+              <div className="p-4">
+                <h3 className="text-white font-semibold mb-2">📜 The "Mega-Timeline"</h3>
+                <p className="text-slate-400 text-sm">Revamped Activity Log and Document Timeline aggregating every document, note, and status change into a single chronological feed.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,22 +1,24 @@
 export const projects = [
   {
     id: "prova-erp",
-    title: "Textile Supply Chain ERP",
+    title: "Provabook – Production Control System",
     client: "Prova Fashion",
     category: "Production / Freelance",
-    description: "Engineered a full-scale ERP automating inventory, order tracking, and financial reporting for Prova Fashion.",
+    description: "Operating system for textile buying houses replacing WhatsApp and Excel chaos with real-time production visibility from inquiry to shipment.",
     highlights: [
-      "Built custom modules for supplier ledgers and fabric stock",
-      "Digitized LC, PI, and payment approvals with audit-ready trails",
-      "Real-time inventory tracking with automatic reorder alerts"
+      "Precision loss tracking with automatic process loss % and mixed fabric calculations",
+      "Live production cockpit with real-time progress bars against finished fabric targets",
+      "Mega-timeline aggregating all documents, notes, and status changes in chronological feed",
+      "Permanent activity log recording every change with who, when, why, and evidence"
     ],
     tech: ["Next.js", "Django", "PostgreSQL", "Cloudflare R2", "DigitalOcean"],
     image: "/projects/prova-erp.png",
     github: "https://github.com/farihafhf/provabook-3",
     status: "Production",
     impact: {
-      compliance: "LC & Invoice Audit Trails",
-      automation: "Automated Ledgers & Stock Alerts"
+      tracking: "Real-Time Production Metrics",
+      accountability: "Un-editable Audit Trails",
+      automation: "Automated Loss Calculations"
     }
   },
   {
@@ -187,14 +189,14 @@ export const projects = [
 export const services = [
   {
     id: "textile-erp",
-    title: "Textile Supply Chain ERP",
-    description: "Complete textile production management from orders to shipments",
+    title: "Provabook – Production Control System",
+    description: "Operating system for buying houses replacing WhatsApp and Excel chaos with real-time production visibility",
     features: [
-      "Foreign & local order tracking",
-      "Sample development workflow",
-      "Financial management & LC tracking",
-      "Production metrics & KPI dashboards",
-      "Incident management & reporting"
+      "Live production cockpit with real-time progress bars",
+      "Permanent activity log with un-editable audit trails",
+      "Precision loss tracking & finished fabric calculations",
+      "Centralized document brain for every order",
+      "Daily targets vs. actual output monitoring"
     ],
     tech: ["Next.js", "Django", "PostgreSQL", "Cloudflare R2"],
     icon: "Code2"

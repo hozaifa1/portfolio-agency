@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowRight, Check, Package, TrendingUp, Users, DollarSign, BarChart3, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Textile ERP System | Complete Supply Chain Management Solution - Nexora",
-  description: "Industry-leading Textile ERP software for garment, apparel, and fashion businesses. Manage orders, inventory, production, and finances with our comprehensive textile supply chain ERP system.",
+  title: "Provabook – Production Control for Modern Buying Houses | Textile ERP - Nexora",
+  description: "Stop chasing updates. Start controlling production. Provabook is the operating system for textile buying houses tired of managing million-dollar orders on WhatsApp and Excel. Real-time production visibility from inquiry to shipment.",
   keywords: [
     "textile ERP",
     "textile ERP system",
@@ -42,11 +42,11 @@ export default function TextileERP() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-cyan-300">
-              Textile ERP System
+              Provabook – Production Control System
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-3xl mx-auto">
-            Complete supply chain management solution for textile, garment, and apparel businesses
+            Stop chasing updates. Start controlling production. The operating system for textile buying houses tired of managing million-dollar orders on WhatsApp and Excel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -70,44 +70,44 @@ export default function TextileERP() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Textile ERP?
+              Why Choose Provabook?
             </h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Built specifically for the textile and garment industry with real-world experience
+              Built for buying houses and mills tired of last-minute shipment pressure, Excel chaos, and blind payments
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Package,
-                title: "Complete Inventory Control",
-                description: "Track fabric, accessories, and finished goods in real-time with automatic reorder alerts and supplier ledgers."
+                icon: TrendingUp,
+                title: "Live Production Cockpit",
+                description: "Real-time progress bars showing exactly how much fabric is knitted, dyed, and finished vs. order quantity with automatic process loss calculations."
               },
               {
                 icon: FileText,
-                title: "Order Management",
-                description: "Manage foreign and local orders, sample development, and production workflows from a single dashboard."
+                title: "The Activity Log (No More 'He Said, She Said')",
+                description: "Every action recorded in a permanent, un-editable timeline. Who changed the quantity? When was artwork approved? Why was the lap dip rejected? Evidence built-in."
               },
               {
-                icon: DollarSign,
-                title: "Financial Management",
-                description: "Automated invoicing, LC tracking, and comprehensive financial reporting reduce accounting errors by 85%."
-              },
-              {
-                icon: TrendingUp,
-                title: "Production Tracking",
-                description: "Monitor production metrics, KPIs, and performance dashboards for data-driven decision making."
-              },
-              {
-                icon: Users,
-                title: "Multi-User Access",
-                description: "Role-based access control for different departments including production, accounts, and management."
+                icon: Package,
+                title: "Centralized Brain for Every Order",
+                description: "Tech packs, POs, LCs, and invoices live with the order. Visual timelines show the entire story from inquiry to packing list in one stream."
               },
               {
                 icon: BarChart3,
-                title: "Advanced Analytics",
-                description: "Generate detailed reports on inventory, sales, purchases, and profitability with custom date ranges."
+                title: "Precision Loss Tracking",
+                description: "New algorithms calculate process loss % and mixed fabric usage automatically. See exactly how much raw material is being wasted per order."
+              },
+              {
+                icon: DollarSign,
+                title: "True-Finish Progress Bars",
+                description: "Production progress calculated against finished fabric targets, giving you a brutally honest view of how close you are to shipment."
+              },
+              {
+                icon: Users,
+                title: "Team Continuity",
+                description: "Any team member can step in and see exactly where an order stands. The knowledge belongs to the company, not the person."
               }
             ].map((feature, idx) => (
               <div
@@ -130,22 +130,22 @@ export default function TextileERP() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Key Features for Textile Businesses
+                The 4 Problems Provabook Solves
               </h2>
               <ul className="space-y-4">
                 {[
-                  "Foreign & local order tracking",
-                  "Sample development workflow",
-                  "Supplier & buyer management",
-                  "Fabric & accessory inventory",
-                  "LC (Letter of Credit) tracking",
-                  "Automated financial reporting",
-                  "Production planning & scheduling",
-                  "Quality control management",
-                  "Shipment tracking",
-                  "Multi-currency support",
-                  "Custom reports & dashboards",
-                  "Mobile-responsive interface"
+                  "Last-Moment Shipment Pressure: Find out about delays before they cost you air freight and discounts",
+                  "The 'Excel & WhatsApp' Black Hole: No more buried updates or 'I didn't see that message' excuses",
+                  "Merchandiser Dependency: Order history stays with the company, not in someone's memory",
+                  "Blind Inspection & Payment: Know if goods are ready and up to spec before you pay",
+                  "Real-time progress bars for knitting, dyeing, and finishing stages",
+                  "Automatic process loss and finished fabric calculations",
+                  "Daily targets showing output vs. required output to hit ETD",
+                  "Permanent activity log with who, when, why, and evidence for every change",
+                  "Document stack: Tech packs, POs, LCs, and invoices live with the order",
+                  "Visual timelines from first inquiry to final packing list",
+                  "Granular tracking of greige, yarn, and finishing stages independently",
+                  "Mobile-responsive interface for on-the-go production monitoring"
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
@@ -186,10 +186,10 @@ export default function TextileERP() {
       <section className="py-20 bg-slate-900/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Textile Business?
+            Ready to Stop Chasing and Start Controlling?
           </h2>
           <p className="text-lg text-slate-400 mb-8">
-            Join leading textile companies using our ERP system to streamline operations and increase profitability
+            Join buying houses and mills using Provabook to replace chaos with a single source of truth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

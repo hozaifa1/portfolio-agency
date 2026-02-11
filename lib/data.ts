@@ -181,6 +181,27 @@ export const projects = [
       framework: "Bagisto E-commerce",
       market: "International Trade"
     }
+  },
+  {
+    id: "reminder-app",
+    title: "Break Enforcer: Screen Time Guardian",
+    client: "Productivity / Android",
+    category: "Mobile / Android",
+    description: "A native Android break enforcer app that monitors continuous screen usage and enforces healthy break intervals with full-screen overlay blocking.",
+    highlights: [
+      "UsageStatsManager integration for precise screen-time tracking",
+      "Full-screen overlay enforcement with immersive mode blocking",
+      "Foreground service for persistent background monitoring",
+      "Jetpack Compose UI with Material 3 design system"
+    ],
+    tech: ["Kotlin", "Jetpack Compose", "Android Studio", "Material 3", "Room DB"],
+    github: "https://github.com/hozaifa1/reminder-app",
+    status: "Development",
+    impact: {
+      tracking: "Real-time Usage Stats",
+      enforcement: "Full-screen Overlay",
+      platform: "Android 10+"
+    }
   }
 ];
 

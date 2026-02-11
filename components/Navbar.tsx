@@ -1,96 +1,115 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Hide navbar completely on LMS page
   const shouldHide = pathname === '/lms';
 
   const navItems = [
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Projects', href: '#portfolio' },
     { name: 'SM LMS', href: '/lms' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '#contact' },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith('#')) return;
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <>
       {!shouldHide && (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/95 backdrop-blur-sm border-b border-slate-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <Link href="/" className="text-xl font-bold text-white font-mono">
-                <span className="text-[#06b6d4]">Nexora</span>
+        <nav
+          className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+            isScrolled
+              ? 'glass py-4 border-b border-white/5'
+              : 'bg-transparent py-6'
+          }`}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="flex justify-between items-center">
+              <Link href="/" className="text-xl font-semibold tracking-tight">
+                <span className="text-[var(--accent-primary)]">Nexora</span>
               </Link>
 
-              <div className="flex md:hidden items-center gap-4 text-sm">
-                <Link href="#services" className="text-slate-300 hover:text-cyan-400 transition-colors">Services</Link>
-                <Link href="/pricing" className="text-slate-300 hover:text-cyan-400 transition-colors">Pricing</Link>
-                <Link href="#contact" className="text-slate-300 hover:text-cyan-400 transition-colors">Contact</Link>
-                <button
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="text-white p-2 ml-2"
-                >
-                  {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                </button>
-              </div>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="md:hidden p-2 text-white/80 hover:text-white"
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
 
-              <div className="hidden md:flex items-center gap-8">
+              <div className="hidden md:flex items-center gap-10">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-slate-300 hover:text-cyan-400 transition-colors font-medium"
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
+                    className="text-white/60 hover:text-white text-sm font-medium transition-colors duration-300"
                   >
                     {item.name}
                   </Link>
                 ))}
                 <Link
                   href="#contact"
-                  className="px-6 py-2 bg-[#06b6d4] hover:bg-cyan-500 text-white rounded-lg font-semibold transition-colors"
+                  onClick={(e) => handleSmoothScroll(e, '#contact')}
+                  className="px-5 py-2.5 bg-[var(--accent-primary)] text-black text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-[var(--accent-glow)] transition-all duration-300"
                 >
-                  Get Started
+                  Contact
                 </Link>
               </div>
             </div>
           </div>
 
           {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-slate-800 border-t border-slate-700"
-            >
-              <div className="px-4 py-4 space-y-3">
+            <div className="md:hidden glass mt-4 mx-4 rounded-2xl overflow-hidden">
+              <div className="px-6 py-6 space-y-4">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block text-slate-300 hover:text-cyan-400 transition-colors font-medium py-2"
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
+                    className="block text-white/70 hover:text-white text-base font-medium py-2 transition-colors"
                   >
                     {item.name}
                   </Link>
                 ))}
                 <Link
                   href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block px-6 py-2 bg-[#06b6d4] hover:bg-cyan-500 text-white rounded-lg font-semibold text-center transition-colors"
+                  onClick={(e) => handleSmoothScroll(e, '#contact')}
+                  className="block px-5 py-3 bg-[var(--accent-primary)] text-black text-sm font-semibold rounded-full text-center mt-4"
                 >
-                  Get Started
+                  Contact
                 </Link>
               </div>
-            </motion.div>
+            </div>
           )}
         </nav>
       )}

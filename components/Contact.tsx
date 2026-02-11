@@ -1,132 +1,81 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 bg-[#09090b] relative">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Let&apos;s Build Something Great
-          </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Reach out to us directly - we typically respond within 12-24 hours
-          </p>
-        </motion.div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <motion.a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=20hozaifa02@gmail.com&su=NextGen%20Solution%20Inquiry"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">Email</h3>
-              </div>
-              <p className="text-slate-400 text-xs">
-                Quick response via email
+    <section id="contact" className="relative py-32">
+      <div className="section-container">
+        <div className="timeline-track hidden md:block" />
+        
+        <div className="md:ml-24">
+          <ScrollReveal>
+            <div className="section-header text-center md:text-left">
+              <p className="text-[var(--accent-primary)] text-sm font-medium tracking-widest uppercase mb-4">
+                ■ Get in Touch
               </p>
-            </motion.a>
-
-            <motion.a
-              href="https://wa.me/8801615001456"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MessageSquare className="w-5 h-5 text-green-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">WhatsApp</h3>
-              </div>
-              <p className="text-slate-400 text-xs">
-                Instant messaging support
-              </p>
-            </motion.a>
-
-            <motion.a
-              href="tel:+8801615001456"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-purple-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">Phone</h3>
-              </div>
-              <p className="text-slate-400 text-xs">
-                Direct call for urgent needs
-              </p>
-            </motion.a>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="group bg-slate-900 border border-slate-800 hover:border-[#06b6d4] rounded-lg p-4 transition-all duration-200 hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-orange-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">Location</h3>
-              </div>
-              <p className="text-slate-400 text-xs">
-                Remote worldwide
-              </p>
-            </motion.div>
-          </div>
-
-          <motion.div
-            className="mt-8 p-6 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
-            <p className="text-slate-400 text-lg mb-6 max-w-2xl mx-auto">
-              Choose your preferred way to reach out. We&apos;re here to help bring your ideas to life with cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <span className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                Available 24/7
-              </span>
-              <span>•</span>
-              <span>Response within 12-24 hours</span>
-              <span>•</span>
-              <span>Free consultation</span>
+              <h2 className="section-title">
+                Let&apos;s build<br />
+                <span className="text-[var(--text-secondary)]">something together</span>
+              </h2>
             </div>
-          </motion.div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <ScrollReveal delay={0.1}>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=20hozaifa02@gmail.com&su=Nexora%20Systems%20Inquiry"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block glass-card p-6 group hover:border-[var(--border-active)] transition-all hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
+                  <Mail className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-1">Email</h3>
+                <p className="text-[var(--text-muted)] text-sm">Share context and next steps</p>
+              </a>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <a
+                href="https://wa.me/8801615001456"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block glass-card p-6 group hover:border-[var(--border-active)] transition-all hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-4">
+                  <MessageSquare className="w-6 h-6 text-green-400" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-1">WhatsApp</h3>
+                <p className="text-[var(--text-muted)] text-sm">Quick, informal sync</p>
+              </a>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <a
+                href="tel:+8801615001456"
+                className="block glass-card p-6 group hover:border-[var(--border-active)] transition-all hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4">
+                  <Phone className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-1">Phone</h3>
+                <p className="text-[var(--text-muted)] text-sm">Direct call for decisions</p>
+              </a>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <div className="glass-card p-6 group hover:border-[var(--border-active)] transition-all">
+                <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-4">
+                  <MapPin className="w-6 h-6 text-orange-400" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-1">Location</h3>
+                <p className="text-[var(--text-muted)] text-sm">Remote-first, worldwide</p>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>

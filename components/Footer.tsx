@@ -1,12 +1,13 @@
 'use client';
 
 import { Github, Linkedin, Mail } from 'lucide-react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   const pathname = usePathname();
 
-  // Hide footer completely on LMS page
   const shouldHide = pathname === '/lms';
 
   if (shouldHide) {
@@ -14,51 +15,67 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#09090b] border-t border-slate-800 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-[#06b6d4] font-mono">Nexora</h3>
-            <p className="text-slate-400">
-              Engineering intelligence for ambitious enterprises worldwide. We build automated ERPs, LMS platforms, and Distributed AI systems.
+    <footer className="border-t border-[var(--border-subtle)]">
+      <div className="section-container py-16">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="md:col-span-2">
+            <Link href="/" className="text-2xl font-semibold text-[var(--accent-primary)] mb-4 block">
+              Nexora
+            </Link>
+            <p className="text-[var(--text-secondary)] max-w-sm leading-relaxed">
+              Engineering intelligence for ambitious enterprises worldwide. We build automated ERPs, LMS platforms, and AI-powered systems.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
-            <div className="flex gap-4">
+            <h4 className="text-white font-medium mb-4">Navigate</h4>
+            <div className="space-y-3">
+              <Link href="#services" className="block text-[var(--text-muted)] hover:text-white transition-colors text-sm">Services</Link>
+              <Link href="#portfolio" className="block text-[var(--text-muted)] hover:text-white transition-colors text-sm">Projects</Link>
+              <Link href="/pricing" className="block text-[var(--text-muted)] hover:text-white transition-colors text-sm">Pricing</Link>
+              <Link href="#contact" className="block text-[var(--text-muted)] hover:text-white transition-colors text-sm">Contact</Link>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-white font-medium mb-4">Connect</h4>
+            <div className="flex gap-3">
               <a
                 href="https://github.com/hozaifa1"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
-                className="w-10 h-10 bg-slate-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full border border-[var(--border-subtle)] flex items-center justify-center text-[var(--text-muted)] hover:text-white hover:border-white/30 transition-all"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-4 h-4" />
               </a>
               <a
                 href="https://linkedin.com/in/hozaifa1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
-                className="w-10 h-10 bg-slate-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full border border-[var(--border-subtle)] flex items-center justify-center text-[var(--text-muted)] hover:text-white hover:border-white/30 transition-all"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="mailto:20hozaifa02@gmail.com"
                 aria-label="Email Contact"
-                className="w-10 h-10 bg-slate-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full border border-[var(--border-subtle)] flex items-center justify-center text-[var(--text-muted)] hover:text-white hover:border-white/30 transition-all"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-4 h-4" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
-          <p>© {new Date().getFullYear()} Nexora Systems. All rights reserved.</p>
-          <p className="mt-2 text-sm">Remote Worldwide | 20hozaifa02@gmail.com</p>
+        <div className="border-t border-[var(--border-subtle)] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-[var(--text-muted)] text-sm">
+            © {currentYear} Nexora Systems. All rights reserved.
+          </p>
+          <p className="text-[var(--text-muted)] text-sm">
+            Remote Worldwide • 20hozaifa02@gmail.com
+          </p>
         </div>
       </div>
     </footer>

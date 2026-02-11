@@ -1,24 +1,22 @@
 export const projects = [
   {
     id: "prova-erp",
-    title: "Provabook – Production Control System",
+    title: "Provabook - Production OS",
     client: "Prova Fashion",
-    category: "Production / Freelance",
-    description: "The operating system for textile buying houses and mills tired of managing million-dollar orders on WhatsApp and Excel. Replaces chaos with a single source of truth, giving you visibility from inquiry to shipment.",
+    category: "Production / SaaS",
+    description: "The operating system for textile buying houses. Replaces WhatsApp/Excel chaos with a single source of truth from inquiry to shipment.",
     highlights: [
-      "Precision loss tracking with automatic process loss % and mixed fabric calculations",
-      "Live production cockpit with real-time progress bars against finished fabric targets",
-      "Mega-timeline aggregating all documents, notes, and status changes in chronological feed",
-      "Permanent activity log recording every change with who, when, why, and evidence"
+      "Live Production Cockpit: Real-time progress bars for knitting, dyeing, and finishing",
+      "Precision Loss Tracking: Automatic calculation of Process Loss % and mixed fabric usage",
+      "The 'Mega-Timeline': Centralized activity log and document stack for full accountability"
     ],
-    tech: ["Next.js", "Django", "PostgreSQL", "Cloudflare R2", "DigitalOcean"],
+    tech: ["Next.js", "Django", "PostgreSQL", "Google Cloud Storage", "DigitalOcean"],
     image: "/projects/prova-erp.png",
     github: "https://github.com/farihafhf/provabook-3",
     status: "Production",
     impact: {
-      tracking: "Real-Time Production Metrics",
-      accountability: "Un-editable Audit Trails",
-      automation: "Automated Loss Calculations"
+      compliance: "LC & Invoice Audit Trails",
+      automation: "Automated Ledgers & Stock Alerts"
     }
   },
   {
@@ -189,16 +187,16 @@ export const projects = [
 export const services = [
   {
     id: "textile-erp",
-    title: "Provabook – Production Control System",
-    description: "Operating system for buying houses replacing WhatsApp and Excel chaos with real-time production visibility",
+    title: "Textile Supply Chain ERP",
+    description: "Complete textile production management from orders to shipments",
     features: [
-      "Live production cockpit with real-time progress bars",
-      "Permanent activity log with un-editable audit trails",
-      "Precision loss tracking & finished fabric calculations",
-      "Centralized document brain for every order",
-      "Daily targets vs. actual output monitoring"
+      "Foreign & local order tracking",
+      "Sample development workflow",
+      "Financial management & LC tracking",
+      "Production metrics & KPI dashboards",
+      "Incident management & reporting"
     ],
-    tech: ["Next.js", "Django", "PostgreSQL", "Cloudflare R2"],
+    tech: ["Next.js", "Django", "PostgreSQL", "Google Cloud Storage"],
     icon: "Code2"
   },
   {
